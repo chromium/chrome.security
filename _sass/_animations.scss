@@ -1,0 +1,96 @@
+// animations 
+
+
+@keyframes scan {
+  0% { background-position:1px bottom }
+  100% { background-position:1px top }
+}
+
+@keyframes flicker {
+  0% { opacity: 1 }
+
+  9% { opacity: 1 }
+  10% { opacity: 0.9 }
+  11% { opacity: 1 }
+
+  19% { opacity: 1 }
+  20% { opacity: 0.7 }
+  21% { opacity: 1 }
+
+  36% { opacity: 1 }
+  37% { opacity: 0.9 }
+  38% { opacity: 1 }
+
+  49% { opacity: 1 }
+  50% { opacity: 0.7 }
+  51% { opacity: 1 }
+
+  67% { opacity: 1 }
+  68% { opacity: 0.8 }
+  69% { opacity: 1 }
+
+  97% { opacity: 1 }
+  98% { opacity: 0.9 }
+  99% { opacity: 1 }
+
+  100% { opacity: 1}
+}
+
+@keyframes twitch {
+  // 0% { transform: skew(0,0) }
+
+  4% { transform: skew(0,0) }
+  5% { transform: skew(0.009rad, 0.001rad) }
+  6% { transform: skew(0,0) }
+
+  17% { transform: skew(0,0) }
+  18% { transform: skew(-0.01rad,-0.001rad) }
+  19% { transform: skew(0,0) }
+
+  25% { transform: translate(0,0), skew(0,0) }
+  26% { transform: translate(2px,0), skew(0.01rad, 0) }
+  27% { transform: translate(0,0), skew(0,0) }
+
+  40% { transform: skew(0,0) }
+  42% { transform: skew(-0.008rad, 0) }
+  44% { transform: skew(0,0) }
+
+  73% { transform: translate(0,0), scale(0,0) }
+  74% { transform: translate(0,2px), scale(0.8, 0.5) }
+  75% { transform: translate(0,0), scale(0,0) }
+
+  // 100% { transform: skew(0,0)}
+}
+
+@keyframes clip {
+  $steps: 50;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100)+vw, 100vw, random(100)+vh, 0);
+    }
+  }
+}
+
+@keyframes bump {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    $rand: random(8);
+    #{percentage($i*(1/$steps))} {
+      transform: translateY($rand+px);
+    }
+  }
+}
+
+@keyframes whoa {
+   0% { transform: translateY(  0%);  }
+   5% { transform: translateY(-20%);  }
+  10% { transform: translateY(  0%);  }
+}
+
+@keyframes green {
+
+}
+
+@keyframes blue {
+
+}
