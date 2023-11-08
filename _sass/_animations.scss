@@ -74,7 +74,7 @@
 @keyframes bump {
   $steps: 20;
   @for $i from 0 through $steps {
-    $rand: random(8);
+    $rand: random(2);
     #{percentage($i*(1/$steps))} {
       transform: translateY($rand+px);
     }
@@ -83,7 +83,7 @@
 
 @keyframes whoa {
    0% { transform: translateY(  0%);  }
-   5% { transform: translateY(-20%);  }
+   5% { transform: translateY(-10%);  }
   10% { transform: translateY(  0%);  }
 }
 

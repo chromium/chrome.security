@@ -27,14 +27,14 @@ body {
   width: calc(100vw - 10vmin);
   height: calc(100vh - 10vmin);
   border-radius: $text-size;
-  filter: blur(1px);
+  filter: blur(0.75px);
   overflow: hidden;
   background-color: var(--screen-bg);
   background: radial-gradient(circle, var(--screen-crt-glow) 0%, var(--screen-bg) 100%);
 }
 
 .textwrap {
-  text-align: center;
+  padding: 10vmin;
   width: 100%;
   height: 100%;
   animation: flicker 5s infinite,
@@ -89,7 +89,7 @@ body {
     transparent 0.1rem, 
     rgba(0,0,0,.2) 0.05rem);
   background-size: 1px 4px;
-  z-index: 1;
+  z-index: 0;
   animation: scan 50s infinite,
               twitch 3s infinite;
 }
