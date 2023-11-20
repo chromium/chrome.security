@@ -1,12 +1,9 @@
 title: chrome.security
-email: serenadantingchen@gmail.com
+email: sereeena@google.com
 description: > 
   Chrome Security
 baseurl: "/chrome-security-placeholder"
 url: https://heisenburger.github.io/chrome-security-placeholder/
-#url: "lab.serena.nz/wordsfromthenight"
-twitter_username: sereeena
-github_username:  heisenburger
 
 # Build settings
 markdown: kramdown

@@ -1,9 +1,6 @@
 // base
 
 :root {
-  --screen-bg: rgb(24,10,18);
-  --screen-crt-glow: rgb(49,53,46);
-  --screen-crt-mask: rgb(37,32,32);
 }
 
 * {
@@ -11,85 +8,8 @@
 }
 
 html {
-  overflow: hidden;
 }
 
 body {
   position: relative;
-  background-color: black;
-  color: white;
-  margin: 0;
-  // cursor: pointer;
-}
-
-.screen {
-  margin: 5vmin;
-  width: calc(100vw - 10vmin);
-  height: calc(100vh - 10vmin);
-  border-radius: $text-size;
-  filter: blur(0.75px);
-  overflow: hidden;
-  background-color: var(--screen-bg);
-  background: radial-gradient(circle, var(--screen-crt-glow) 0%, var(--screen-bg) 100%);
-}
-
-.textwrap {
-  padding: 10vmin;
-  width: 100%;
-  height: 100%;
-  animation: flicker 5s infinite,
-              twitch 3s infinite,
-              bump 2s infinite alternate-reverse;
-}
-
-.tvtext {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  display: inline-block;
-  width: 100%;
-  // padding-top: $text-size;
-  
-}
-
-.r { 
-  margin-left: -$seperation;
-}
-
-.g { 
-  margin-top: $seperation * 0.8;
-}
-
-.b { 
-  margin-left: $seperation;
-}
-
-.w {
-}
-
-.w-l {
-  background-color: var(--screen-crt-mask);
-  margin-left: (-$seperation * 2);
-  animation: clip 2s infinite linear alternate-reverse,
-}
-
-.w-r {
-  background-color: var(--screen-crt-mask);
-  margin-left: ($seperation * 2);
-  animation: clip 2s infinite linear alternate-reverse;
-}
-
-.crtlines {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(
-    transparent 0.1rem, 
-    rgba(0,0,0,.2) 0.05rem);
-  background-size: 1px 4px;
-  z-index: 0;
-  animation: scan 50s infinite,
-              twitch 3s infinite;
 }

@@ -1,23 +1,8 @@
 ---
-# it me : serena chen
----
+
 @charset "utf-8";
 
 // Variables
-$sansserif: -apple-system, BlinkMacSystemFont, 
-    "Roboto", "Ubuntu", "Segoe UI", 
-    "Fira Sans", "Droid Sans", "Helvetica Neue", 
-    sans-serif;
-$serif: "Adobe Caslon Pro","Athelas",
-  "Goudy Old Style","Californian FB", 
-  Georgia, serif;
-
-$text-size: 15vw;
-$seperation: 3px;
-
-$bp-tablet:        768px;
-$bp-desktop:       1024px;
-$bp-desktopwide:   1440px;
 
 // Mixins
 @mixin query($breakpoint) {
