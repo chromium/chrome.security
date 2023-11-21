@@ -1,19 +1,87 @@
 ---
-
+who you gonna call: chrome security
+---
 @charset "utf-8";
 
-// Variables
+// SCSS Variables
+$bp-sml:  480px;
+$bp-med:  768px;
+$bp-lrg: 1044px;
+$bp-xlg: 1440px;
+$bp-2xl: 2000px;
+$bp-3xl: 2800px;
 
-// Mixins
+// Helpers
 @mixin query($breakpoint) {
   @media screen and (min-width: $breakpoint) {
     @content;
   }
 }
 
+@mixin dark() {
+  @media only screen and (prefers-color-scheme: dark) {
+    @content
+  }
+}
+
+@mixin reducemotion() {
+  @media only screen and (prefers-reduced-motion) {
+    @content
+  }
+}
+
+// CSS snippets
+@mixin transit {
+  transition: all 0.2s ease-in-out;
+  @include reducemotion {
+    transition: none;
+  }
+}
+
+@mixin pseudo {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin x-center {
+  // parent must span 100% of space to be centered in
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin y-center($direction: column) {
+  display: flex;
+  @if $direction == column {
+    flex-direction: column; // children of this element will flow in a column
+    justify-content: center;
+  }
+  @if $direction == row {
+    flex-direction: column; // children of this element will flow in a row
+    align-items: center;
+  }
+}
+
+@mixin y-center {
+  display: flex;
+  flex-direction: row; // children of this element will flow in a column
+  align-items: center;
+}
+
+@mixin xy-center {
+  // parent must have position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-  "base",
-  "typography",
-  "animations"
+  "base"
+  ,"typography"
+  ,"layout"
+  ,"animations"
 ;

@@ -1,15 +1,164 @@
-// base
+// Set variables
 
 :root {
-}
 
+// System fonts
+  --ff-sans: -apple-system, BlinkMacSystemFont, "SF Pro", "Helvetica Neue", "Helvetica", 
+    "Arial", "Roboto", "Ubuntu", "Segoe UI", "Fira Sans", "Droid Sans", 
+    sans-serif;
+  --ff-serif: "Times New Roman", Times,
+    serif;
+  --ff-garamond: "Adobe Garamond Pro", "Adobe Garamond", "EB Garamond", "Monotype Garamond", "ITC Garamond", Garamond, serif;
+  --ff-helvetica: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+
+// Imported fonts
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  --ff-archivo: "Archivo", "Gotham", "Helvetica", sans-serif;
+
+// Sizes
+  --f-14:  0.75rem; // sml
+  --f-16:     1rem; // med
+  --f-20:  1.25rem; // semi
+  --f-24:   1.5rem; // lrg
+  --f-32:     2rem; // xlg
+  --f-48:     3rem; // 2xl
+  --f-60:  3.75rem; // hero
+  --f-72:   4.5rem; // xhr
+  --f-96:     6rem; // 2xh
+  --f-120:  7.5rem; // 3xh
+
+    // Semantic font sizes
+    --f-sml:  var(--f-14);
+    --f-med:  var(--f-16);
+    --f-semi: var(--f-20);
+    --f-lrg:  var(--f-20);
+    --f-xlg:  var(--f-24);
+    --f-2xl:  var(--f-24);
+    --f-hero: var(--f-24);
+    --f-xhr:  var(--f-32);
+    --f-2xh:  var(--f-32);
+    --f-3xh:  var(--f-48);
+    @include query($bp-sml){
+      --f-lrg:  var(--f-24);
+      --f-xlg:  var(--f-32);
+      --f-hero: var(--f-48);
+      --f-xhr:  var(--f-48);
+      --f-2xh:  var(--f-60);
+      --f-3xh:  var(--f-60);
+    }
+    @include query($bp-med){
+      --f-2xl:  var(--f-32);
+      --f-3xh:  var(--f-72);
+    }
+    @include query($bp-lrg){
+      --f-hero: var(--f-48);
+      --f-xhr:  var(--f-60);
+      --f-2xh:  var(--f-72);
+      --f-3xh:  var(--f-96);
+    }
+    @include query($bp-xlg){
+      --f-2xl:  var(--f-48);
+      --f-hero: var(--f-60);
+      --f-xhr:  var(--f-72);
+      --f-2xh:  var(--f-96);
+      --f-3xh:  var(--f-120);
+    }
+
+  --u1:  0.625rem; // 10px
+  --u2: calc(2 * var(--u1));
+  --u4: calc(4 * var(--u1));
+  --u6: calc(6 * var(--u1));
+  --u8: calc(8 * var(--u1));
+  --u10: calc(10 * var(--u1));
+  --u12: calc(12 * var(--u1));
+  --u16: calc(16 * var(--u1));
+
+    // Responsive sizing
+    --s1: var(--u1);
+    --s2: var(--u2);
+    --s4: var(--u4);
+    --s6: var(--u6);
+    --s8: var(--u8);
+    @include query($bp-sml){
+      --s2: var(--u3);
+    }
+    @include query($bp-med){
+      --s2: var(--u4);
+    }
+    @include query($bp-lrg){
+      --s1: var(--u2);
+      --s2: var(--u5);
+    }
+    @include query($bp-xlg){
+      --s2: var(--u6);
+    }
+
+// Colours
+  --grey0: #111;
+  --grey1: #333;
+  --grey2: #5a5a5a;
+  --grey3: #b2b2b2;
+  --grey4: #d0d0d0;
+  --grey5: #f6f6f6;
+  --greyt: rgba(80,80,80,0.5);
+
+  --cobalt: #0040ff;
+
+  // Semantic colours
+    --fg:    var(--grey0); // foreground
+    --fg-en:      #121517; // forground lil bit more
+    --fg-em:        black; // forground emphasised
+    --fg-dm: var(--grey2); // foreground de-emphasised
+    --bg:           white; // background
+    --fc:   var(--cobalt); // focus colour
+    --ac:   var(--cobalt); // accent colour
+  @include dark {
+    --fg:    #8c929e;
+    --fg-en: #9b9fa7;
+    --fg-em: #ded1ca;
+    --fg-dm: #26252c;
+    --bg:    #121517;
+    --fc:    #2d3554;
+    --ac:    #326AB3;
+  }
+
+} // end :root
+
+
+// Reset 
 * {
   box-sizing: border-box;
 }
 
-html {
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   position: relative;
+  max-width: 100vw;
+  overflow-x: hidden; // prevent unintended side scroll
+}
+
+@media print {
+  body {
+    color: black !important;
+    background-color: white;
+    background-image: none;
+  }
+  .no-print {
+    display: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  color: transparent;
+  @include dark {
+    filter: contrast(0.8);
+  }
 }

@@ -1,6 +1,22 @@
-// type
+// Base type sizing
+
+html {
+  font-size: 16px; // note this affects layout sizing also
+  @include query($bp-2xl){
+    font-size: 18px;
+  }
+  @include query($bp-3xl){
+    font-size: 20px;
+  }
+  @media only print {
+    font-size: 11pt;
+  }
+}
 
 body {
+  font-family: var(--ff-archivo);
+  line-height: 1.5;
+  color: var(--fg);
   font-feature-settings: "kern" 1,"liga" 1,"calt" 1,"pnum" 1,"tnum" 0,"onum" 1,"lnum" 0,"dlig" 0;
   font-kerning: normal;
   text-rendering: optimizeLegibility;
