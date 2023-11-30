@@ -1,0 +1,43 @@
+// flex
+.flex {
+  display: flex;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+// border box styling
+.box {
+  box-shadow: 0 0 0 1px var(--fg), inset 0 0 0 1px var(--fg);
+  padding: clamp(calc(0.5 * var(--u1)), var(--s1), var(--u6)) clamp(var(--u1),var(--s2),var(--u10));
+}
+
+// box links
+a.box {
+  display: block;
+}
+
+html {
+  min-height: 100vh;
+  @include xy-center;
+}
+
+body {
+  @include query($bp-sml){
+    padding: var(--s2);
+  }
+  @include query($bp-xlg){
+    max-width: 100rem;
+  }
+}
+
+header {
+  flex-wrap: wrap;
+  @include query($bp-xlg){
+    flex-wrap: nowrap;
+  }
+  img {
+    mix-blend-mode: exclusion;
+  }
+}

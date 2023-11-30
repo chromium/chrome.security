@@ -12,7 +12,7 @@
   --ff-helvetica: "Helvetica Neue", "Helvetica", Arial, sans-serif;
 
 // Imported fonts
-  @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,:wght@200..70,:wdth@62..125&display=swap');
   --ff-archivo: "Archivo", "Gotham", "Helvetica", sans-serif;
 
 // Sizes
@@ -36,19 +36,18 @@
     --f-2xl:  var(--f-24);
     --f-hero: var(--f-24);
     --f-xhr:  var(--f-32);
-    --f-2xh:  var(--f-32);
-    --f-3xh:  var(--f-48);
+    --f-2xh:  var(--f-48);
+    --f-3xh:  var(--f-60);
     @include query($bp-sml){
       --f-lrg:  var(--f-24);
       --f-xlg:  var(--f-32);
       --f-hero: var(--f-48);
       --f-xhr:  var(--f-48);
       --f-2xh:  var(--f-60);
-      --f-3xh:  var(--f-60);
+      --f-3xh:  var(--f-72);
     }
     @include query($bp-med){
       --f-2xl:  var(--f-32);
-      --f-3xh:  var(--f-72);
     }
     @include query($bp-lrg){
       --f-hero: var(--f-48);
@@ -66,7 +65,9 @@
 
   --u1:  0.625rem; // 10px
   --u2: calc(2 * var(--u1));
+  --u3: calc(3 * var(--u1));
   --u4: calc(4 * var(--u1));
+  --u5: calc(5 * var(--u1));
   --u6: calc(6 * var(--u1));
   --u8: calc(8 * var(--u1));
   --u10: calc(10 * var(--u1));
@@ -113,9 +114,9 @@
     --fc:   var(--cobalt); // focus colour
     --ac:   var(--cobalt); // accent colour
   @include dark {
-    --fg:    #8c929e;
-    --fg-en: #9b9fa7;
-    --fg-em: #ded1ca;
+    --fg:    #ded1ca;
+    --fg-en: #ded1ca;
+    --fg-em: white;
     --fg-dm: #26252c;
     --bg:    #121517;
     --fc:    #2d3554;

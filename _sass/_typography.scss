@@ -17,7 +17,64 @@ body {
   font-family: var(--ff-archivo);
   line-height: 1.5;
   color: var(--fg);
+  background-color: var(--bg);
   font-feature-settings: "kern" 1,"liga" 1,"calt" 1,"pnum" 1,"tnum" 0,"onum" 1,"lnum" 0,"dlig" 0;
   font-kerning: normal;
   text-rendering: optimizeLegibility;
+}
+
+// Text sizes
+
+.f-hero {
+  font-size: var(--f-hero);
+}
+.f-xhr {
+  font-size: var(--f-xhr);
+}
+.f-2xh {
+  font-size: var(--f-2xh);
+}
+.f-3xh {
+  font-size: var(--f-3xh);
+}
+
+// Text styles
+.narrow {
+  font-stretch: 60%;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+// Strip link styling for block box links
+a.box {
+  color: var(--fg);
+  text-decoration: initial;
+}
+
+// Strip list styling if list item contains box
+li:has(.box) {
+  list-style: none;
+}
+
+// Header styling
+.f-hero,
+.f-xhr,
+.f-2xh,
+.f-3xh {
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+}
+
+header {
+
+  h1 + div p { // subtitle
+    &::before {
+      content: '“';
+    }
+    &::after {
+      content: '”';
+    }
+  }
 }

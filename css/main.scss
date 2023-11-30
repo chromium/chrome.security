@@ -70,12 +70,9 @@ $bp-3xl: 2800px;
   align-items: center;
 }
 
-@mixin xy-center {
-  // parent must have position: relative;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@mixin xy-center { // place on parent element
+  display: grid;
+  place-items: center; // this centers child elements within the grid cell
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
