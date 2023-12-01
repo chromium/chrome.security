@@ -213,7 +213,7 @@ article {
     letter-spacing: 0.25em;
     line-height: var(--u4);
   }
-  p {
+  p.blog-excerpt {
     @extend .f-semi;
     @extend .light;
     &::after {

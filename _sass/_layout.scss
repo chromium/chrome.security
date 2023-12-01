@@ -147,38 +147,13 @@ article {
     max-width: 42rem;
   }
 
-    #chromeball-outline {
-      animation: 
-        rotate 250s linear infinite
-       ,rotate-chromeball 1ms ease-in-out
-      ;
-    }
-    #circle-dotted-inner {
-      animation: 
-        rotate-back 350s linear infinite
-       ,rotate-circle-dotted-inner 1ms ease-in-out
-      ;
-    }
-    #circle-dotted-middle {
-      animation: 
-        rotate 600s linear infinite
-       ,rotate-circle-dotted-middle 1ms ease-in-out
-      ;
-    }
-    #circle-dotted-outer {
-      animation: 
-        rotate-back 800s linear infinite
-       ,rotate-circle-dotted-outer 1ms ease-in-out
-      ;
-    }
-
-    #chromeball-outline,
-    #circle-dotted-inner,
-    #circle-dotted-middle,
-    #circle-dotted-outer {
-      transform-origin: center center;
-      // animation-duration: 1ms; // Firefox requires this to apply the animation
-      animation-timeline: auto, --scrollTimeline;
-      animation-composition: add;
-      @include respectReduceMotion;
-    }
+hr.squiggle {
+  border-style: none;
+  height: var(--s8);
+  background-image: url("../images/squiggle.svg");
+  background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+    background-position-y: center;
+    background-color: var(--bg);
+    background-blend-mode: difference;
+}

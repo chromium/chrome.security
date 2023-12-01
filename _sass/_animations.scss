@@ -2,6 +2,58 @@
   @include transit;
 }
 
+// Chromeball animation
+
+#chromeball-outline {
+  animation: 
+    rotate 250s linear infinite
+   ,rotate-chromeball 1ms ease-in-out
+  ;
+}
+#circle-dotted-inner {
+  animation: 
+    rotate-back 350s linear infinite
+   ,rotate-circle-dotted-inner 1ms ease-in-out
+  ;
+}
+#circle-dotted-middle {
+  animation: 
+    rotate 600s linear infinite
+   ,rotate-circle-dotted-middle 1ms ease-in-out
+  ;
+}
+#circle-dotted-outer {
+  animation: 
+    rotate-back 800s linear infinite
+   ,rotate-circle-dotted-outer 1ms ease-in-out
+  ;
+}
+
+// Squiggle hr
+
+hr.squiggle {
+  animation: 
+    scroll-bg-x 100s linear infinite
+   ,scroll-bg-x 1ms ease-in-out
+  ;
+}
+
+// Compound animation
+
+#chromeball-outline,
+#circle-dotted-inner,
+#circle-dotted-middle,
+#circle-dotted-outer,
+hr.squiggle {
+  transform-origin: center center;
+  // animation-duration: 1ms; // Firefox requires this to apply the animation
+  animation-timeline: auto, --scrollTimeline;
+  animation-composition: add;
+  @include respectReduceMotion;
+}
+
+// Animation definitions
+
 @keyframes rotate {
   from { transform: rotate(0deg);    }
   to {   transform: rotate(-360deg); }
@@ -30,4 +82,9 @@
 @keyframes rotate-circle-dotted-outer {
   from { transform: rotate(0deg);   }
   to {   transform: rotate(30deg); }
+}
+
+@keyframes scroll-bg-x {
+  from { background-position-x: 0;   }
+  to {   background-position-x: 50vmax; }
 }
