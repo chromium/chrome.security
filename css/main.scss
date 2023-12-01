@@ -38,6 +38,12 @@ $bp-3xl: 2800px;
   }
 }
 
+@mixin respectReduceMotion {
+  @include reducemotion(){
+    animation: none;
+  }
+}
+
 @mixin pseudo {
   content: '';
   position: absolute;

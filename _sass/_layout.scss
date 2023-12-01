@@ -146,26 +146,39 @@ article {
   #chromeball-protect {
     max-width: 42rem;
   }
+
+    #chromeball-outline {
+      animation: 
+        rotate 300s linear infinite
+       ,rotate-chromeball 1ms ease-in-out
+      ;
+    }
+    #circle-dotted-inner {
+      animation: 
+        rotate-back 350s linear infinite
+       ,rotate-circle-dotted-inner 1ms ease-in-out
+      ;
+    }
+    #circle-dotted-middle {
+      animation: 
+        rotate 400s linear infinite
+       ,rotate-circle-dotted-middle 1ms ease-in-out
+      ;
+    }
+    #circle-dotted-outer {
+      animation: 
+        rotate-back 500s linear infinite
+       ,rotate-circle-dotted-outer 1ms ease-in-out
+      ;
+    }
+
     #chromeball-outline,
     #circle-dotted-inner,
     #circle-dotted-middle,
     #circle-dotted-outer {
       transform-origin: center center;
-      animation-duration: 1ms; // Firefox requires this to apply the animation
-      animation-timeline: --scrollTimeline;
-      @include reducemotion(){
-        animation: none;
-      }
-    }
-    #chromeball-outline {
-      animation-name: rotate-chromeball;
-    }
-    #circle-dotted-outer {
-      animation-name: rotate-circle-dotted-outer;
-    }
-    #circle-dotted-middle {
-      animation-name: rotate-circle-dotted-middle;
-    }
-    #circle-dotted-inner {
-      animation-name: rotate-circle-dotted-inner;
+      // animation-duration: 1ms; // Firefox requires this to apply the animation
+      animation-timeline: auto, --scrollTimeline;
+      animation-composition: add;
+      @include respectReduceMotion;
     }
