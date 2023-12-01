@@ -12,8 +12,10 @@
   --ff-helvetica: "Helvetica Neue", "Helvetica", Arial, sans-serif;
 
 // Imported fonts
-  @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,:wght@200..70,:wdth@62..125&display=swap');
   --ff-archivo: "Archivo", "Gotham", "Helvetica", sans-serif;
+  --ff-inter: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro", "Helvetica Neue", "Helvetica", 
+    "Arial", "Roboto", "Ubuntu", "Segoe UI", "Fira Sans", "Droid Sans", 
+    sans-serif;
 
 // Sizes
   --f-14:  0.75rem; // sml
@@ -26,34 +28,42 @@
   --f-72:   4.5rem; // xhr
   --f-96:     6rem; // 2xh
   --f-120:  7.5rem; // 3xh
+  --f-136:  8.5rem;
+  --f-156: 9.75rem; // 4xh
 
     // Semantic font sizes
     --f-sml:  var(--f-14);
     --f-med:  var(--f-16);
-    --f-semi: var(--f-20);
+    --f-semi: var(--f-16);
+    --f-cemi: var(--f-20);
     --f-lrg:  var(--f-20);
     --f-xlg:  var(--f-24);
     --f-2xl:  var(--f-24);
-    --f-hero: var(--f-24);
+    --f-hero: var(--f-32);
     --f-xhr:  var(--f-32);
     --f-2xh:  var(--f-48);
     --f-3xh:  var(--f-60);
+    --f-4xh:  var(--f-72);
     @include query($bp-sml){
-      --f-lrg:  var(--f-24);
       --f-xlg:  var(--f-32);
       --f-hero: var(--f-48);
       --f-xhr:  var(--f-48);
       --f-2xh:  var(--f-60);
       --f-3xh:  var(--f-72);
+      --f-4xh:  var(--f-72);
     }
     @include query($bp-med){
+      --f-semi: var(--f-20);
+      --f-lrg:  var(--f-24);
       --f-2xl:  var(--f-32);
+      --f-4xh:  var(--f-96);
     }
     @include query($bp-lrg){
       --f-hero: var(--f-48);
       --f-xhr:  var(--f-60);
       --f-2xh:  var(--f-72);
       --f-3xh:  var(--f-96);
+      --f-4xh:  var(--f-120);
     }
     @include query($bp-xlg){
       --f-2xl:  var(--f-48);
@@ -61,6 +71,17 @@
       --f-xhr:  var(--f-72);
       --f-2xh:  var(--f-96);
       --f-3xh:  var(--f-120);
+      --f-4xh:  var(--f-136);
+    }
+    @include query($bp-2xl){
+      --f-4xh:  var(--f-156);
+    }
+    @include query($bp-3xl){
+      --f-semi: var(--f-24);
+      --f-cemi: var(--f-24);
+      --f-lrg:  var(--f-32);
+      --f-hero: var(--f-72);
+      --f-4xh:  12rem;
     }
 
   --u1:  0.625rem; // 10px
@@ -82,16 +103,20 @@
     --s8: var(--u8);
     @include query($bp-sml){
       --s2: var(--u3);
+      --s8: var(--u10);
     }
     @include query($bp-med){
       --s2: var(--u4);
+      --s4: var(--u8);
     }
     @include query($bp-lrg){
       --s1: var(--u2);
       --s2: var(--u5);
+      --s8: var(--u12);
     }
     @include query($bp-xlg){
       --s2: var(--u6);
+      --s8: var(--u16);
     }
 
 // Colours
@@ -106,7 +131,7 @@
   --cobalt: #0040ff;
 
   // Semantic colours
-    --fg:    var(--grey0); // foreground
+    --fg:         #212126; // foreground
     --fg-en:      #121517; // forground lil bit more
     --fg-em:        black; // forground emphasised
     --fg-dm: var(--grey2); // foreground de-emphasised
@@ -114,11 +139,11 @@
     --fc:   var(--cobalt); // focus colour
     --ac:   var(--cobalt); // accent colour
   @include dark {
-    --fg:    #ded1ca;
-    --fg-en: #ded1ca;
-    --fg-em: white;
-    --fg-dm: #26252c;
-    --bg:    #121517;
+    --fg:    #e5e5e5;
+    --fg-en: #e5e5e5;
+    --fg-em: #ffffff;
+    --fg-dm: #ded1ca;
+    --bg:    #212126;
     --fc:    #2d3554;
     --ac:    #326AB3;
   }

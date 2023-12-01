@@ -15,7 +15,7 @@ html {
 
 body {
   font-family: var(--ff-archivo);
-  line-height: 1.5;
+  line-height: 1.33;
   color: var(--fg);
   background-color: var(--bg);
   font-feature-settings: "kern" 1,"liga" 1,"calt" 1,"pnum" 1,"tnum" 0,"onum" 1,"lnum" 0,"dlig" 0;
@@ -25,6 +25,21 @@ body {
 
 // Text sizes
 
+.f-med {
+  font-size: var(--f-med);
+}
+.f-semi {
+  font-size: var(--f-semi);
+}
+.f-lrg {
+  font-size: var(--f-lrg);
+}
+.f-xlg {
+  font-size: var(--f-xlg);
+}
+.f-2xl {
+  font-size: var(--f-2xl);
+}
 .f-hero {
   font-size: var(--f-hero);
 }
@@ -37,15 +52,57 @@ body {
 .f-3xh {
   font-size: var(--f-3xh);
 }
+.f-4xh {
+  font-size: var(--f-4xh);
+}
 
 // Text styles
+
+em, i, .italic {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 900;
+}
+
 .narrow {
   font-stretch: 60%;
+}
+
+.wide {
+  font-stretch: 125%;
+}
+
+.light {
+  font-weight: 300;
+  @include query($bp-sml){
+    font-weight: 200;
+  }
 }
 
 .semibold {
   font-weight: 600;
 }
+
+.black {
+  font-weight: 900;
+}
+
+.lower {
+  text-transform: lowercase;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+// Text alignment
+
+.text-right {
+  text-align: right;
+}
+
 
 // Strip link styling for block box links
 a.box {
@@ -62,7 +119,19 @@ li:has(.box) {
 .f-hero,
 .f-xhr,
 .f-2xh,
-.f-3xh {
+.f-3xh,
+.f-4xh {
+  text-rendering: geometricPrecision;
+}
+
+.f-hero,
+.f-xhr {
+  line-height: 1.2;
+}
+
+.f-2xh,
+.f-3xh,
+.f-4xh {
   line-height: 0.8;
   letter-spacing: -0.05em;
 }
@@ -76,5 +145,66 @@ header {
     &::after {
       content: '”';
     }
+  }
+}
+
+nav a.box,
+nav h2.grid-fours,
+.linkstyle {
+  @extend .caps;
+  font-size: var(--f-cemi);
+  letter-spacing: 0.2em;
+}
+
+nav a.box,
+.linkstyle {
+  &::after {
+    content: '↗︎';
+    font-family: var(--ff-inter);
+  }
+}
+
+nav h2.grid-fours {
+  @extend .light;
+  @extend .italic;
+}
+
+.featured {
+  @extend .f-lrg;
+  @extend .light;
+  ul {
+    list-style: none;
+  }
+    li {
+      margin: var(--s1) 0;
+    }
+  strong {
+    @extend .wide;
+    font-size: 1.16em;
+  }
+  &:first-child {
+    padding-top: var(--s2);
+    padding-bottom: var(--s2);
+  }
+}
+
+// article typographies
+
+article {
+  h3 {
+    @extend .f-xlg;
+    @extend .black;
+    letter-spacing: -0.025em;
+    line-height: 1;
+  }
+  p.blog-meta {
+    @extend .f-med;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    line-height: var(--u4);
+  }
+  p {
+    @extend .f-semi;
+    @extend .light;
   }
 }

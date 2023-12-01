@@ -7,37 +7,129 @@
   flex-grow: 1;
 }
 
+// grid
+
+.grid-12 { // classique 12-column grid setup
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: stretch;
+}
+
+  .grid-sub {
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+
+  .grid-ones {
+    grid-column: span 12;
+  }
+
+  .grid-twos {
+    grid-column: span 12;
+    @include query($bp-lrg){
+      grid-column: span 6;
+    }
+  }
+
+    .grid-twos-primary {
+      grid-column: span 12;
+      @include query($bp-lrg){
+        grid-column: span 7;
+      }
+      @include query($bp-2xl){
+        grid-column: span 6;
+      }
+    }
+
+    .grid-twos-secondary {
+      grid-column: span 12;
+      @include query($bp-lrg){
+        grid-column: span 5;
+      }
+      @include query($bp-2xl){
+        grid-column: span 6;
+      }
+    }
+
+  .grid-threes-lil {
+    grid-column: span 12;
+    @include query($bp-med){
+      grid-column: span 4;
+    }
+  }
+
+  .grid-threes {
+    grid-column: span 12;
+    @include query($bp-lrg){
+      grid-column: span 4;
+    }
+  }
+
+  .grid-fours {
+    grid-column: span 12;
+    @include query($bp-sml){
+      grid-column: span 3;
+    }
+  }
+
 // border box styling
 .box {
   box-shadow: 0 0 0 1px var(--fg), inset 0 0 0 1px var(--fg);
-  padding: clamp(calc(0.5 * var(--u1)), var(--s1), var(--u6)) clamp(var(--u1),var(--s2),var(--u10));
+  padding: var(--u2);
+  @include query($bp-med){
+    padding: var(--u2) var(--u4);
+  }
 }
 
 // box links
 a.box {
   display: block;
+  height: 100%;
 }
 
 html {
   min-height: 100vh;
-  @include xy-center;
 }
 
 body {
   @include query($bp-sml){
-    padding: var(--s2);
+    padding: var(--u1);
   }
-  @include query($bp-xlg){
-    max-width: 100rem;
+  @include query($bp-lrg){
+    padding: var(--s1);
+    max-width: 2800px;
+    margin: 0 auto;
   }
 }
 
-header {
-  flex-wrap: wrap;
-  @include query($bp-xlg){
-    flex-wrap: nowrap;
+header.box {
+  padding-top: var(--s8);
+  padding-bottom: var(--s2);
+}
+
+h2.grid-ones {
+  padding-top: var(--s2);
+  padding-bottom: var(--s2);
+}
+
+article {
+  padding-top: var(--s2);
+  padding-bottom: var(--s2);
+  @include query($bp-lrg){
+    padding-top: var(--s1);
+    padding-bottom: var(--s1);
   }
-  img {
-    mix-blend-mode: exclusion;
-  }
+  height: 100%;
+  @extend .flex;
+  flex-direction: column;
+    p:nth-last-child(2) {
+      @extend .flex-grow;
+      margin-bottom: var(--u2);
+    }
+}
+
+// decorative
+
+.chromeball {
+  @include xy-center
 }

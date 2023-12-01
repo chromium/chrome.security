@@ -8,7 +8,7 @@ $bp-sml:  480px;
 $bp-med:  768px;
 $bp-lrg: 1044px;
 $bp-xlg: 1440px;
-$bp-2xl: 2000px;
+$bp-2xl: 1920px;
 $bp-3xl: 2800px;
 
 // Helpers
@@ -74,6 +74,9 @@ $bp-3xl: 2800px;
   display: grid;
   place-items: center; // this centers child elements within the grid cell
 }
+
+// Import 3rd party fonts
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62,400;0,100,200;0,100,300;0,100,500;0,100,600;0,100,700;0,100,800;0,100,900;0,125,300;0,125,900;1,62,400;1,100,200;1,100,300;1,100,400;1,100,500;1,100,600;1,100,700;1,100,800;1,100,900;1,125,300&family=Inter:wght@300;400;700;900&display=swap');
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
