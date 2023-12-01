@@ -82,13 +82,22 @@
 }
 
 // box links
+a { @include transit; }
 a.box {
   display: block;
   height: 100%;
+  &:hover {
+    background-color: var(--fg);
+    color: var(--bg);
+  }
 }
 
 html {
   min-height: 100vh;
+  overflow-y: scroll;
+  scroll-timeline: --scrollTimeline y;
+    // Firefox supports the older "vertical" syntax
+    scroll-timeline: --scrollTimeline vertical;
 }
 
 body {
@@ -133,3 +142,30 @@ article {
 .chromeball {
   @include xy-center
 }
+
+  #chromeball-protect {
+    max-width: 42rem;
+  }
+    #chromeball-outline,
+    #circle-dotted-inner,
+    #circle-dotted-middle,
+    #circle-dotted-outer {
+      transform-origin: center center;
+      animation-duration: 1ms; // Firefox requires this to apply the animation
+      animation-timeline: --scrollTimeline;
+      @include reducemotion(){
+        animation: none;
+      }
+    }
+    #chromeball-outline {
+      animation-name: rotate-chromeball;
+    }
+    #circle-dotted-outer {
+      animation-name: rotate-circle-dotted-outer;
+    }
+    #circle-dotted-middle {
+      animation-name: rotate-circle-dotted-middle;
+    }
+    #circle-dotted-inner {
+      animation-name: rotate-circle-dotted-inner;
+    }

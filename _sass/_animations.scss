@@ -1,0 +1,23 @@
+.transition {
+  @include transit;
+}
+
+@keyframes rotate-chromeball {
+  from { transform: rotate(0deg);    }
+  to {   transform: rotate(-120deg); }
+}
+
+@keyframes rotate-circle-dotted-inner {
+  from { transform: rotate(0deg);    }
+  to {   transform: rotate(120deg); }
+}
+
+@keyframes rotate-circle-dotted-middle {
+  from { transform: rotate(0deg);    }
+  to {   transform: rotate(-120deg); }
+}
+
+@keyframes rotate-circle-dotted-outer {
+  from { transform: rotate(0deg);    }
+  to {   transform: rotate(120deg); }
+}
