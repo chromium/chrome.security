@@ -149,7 +149,7 @@ article {
 
     #chromeball-outline {
       animation: 
-        rotate 300s linear infinite
+        rotate 250s linear infinite
        ,rotate-chromeball 1ms ease-in-out
       ;
     }
@@ -161,13 +161,13 @@ article {
     }
     #circle-dotted-middle {
       animation: 
-        rotate 400s linear infinite
+        rotate 600s linear infinite
        ,rotate-circle-dotted-middle 1ms ease-in-out
       ;
     }
     #circle-dotted-outer {
       animation: 
-        rotate-back 500s linear infinite
+        rotate-back 800s linear infinite
        ,rotate-circle-dotted-outer 1ms ease-in-out
       ;
     }
