@@ -120,32 +120,48 @@
     }
 
 // Colours
+  // greys
   --grey0: #111;
   --grey1: #333;
   --grey2: #5a5a5a;
   --grey3: #b2b2b2;
   --grey4: #d0d0d0;
-  --grey5: #f6f6f6;
-  --greyt: rgba(80,80,80,0.5);
+  --grey5: #e5e5e5
+  --grey6: #f6f6f6;
 
+  // staples
+  --night: #121517;
+  --charcoal: #212126;
+  --linen: #ded1ca;
+  --navy: #2d3554;
+  --cerulean: #326AB3;
+
+  // brights
   --cobalt: #0040ff;
+  --electric: #f1ff00;
+
+  // google logo pallete
+  --g-red: #DD3529;
+  --g-yelllow: #FBBF0E;
+  --g-green: #2A9C49;
+  --g-blue: #1A73E8;
 
   // Semantic colours
-    --fg:         #212126; // foreground
-    --fg-en:      #121517; // forground lil bit more
+    --fg: var(--charcoal); // foreground
+    --fg-en: var(--night); // forground lil bit more
     --fg-em:        black; // forground emphasised
     --fg-dm: var(--grey2); // foreground de-emphasised
     --bg:           white; // background
     --fc:   var(--cobalt); // focus colour
     --ac:   var(--cobalt); // accent colour
   @include dark {
-    --fg:    #e5e5e5;
-    --fg-en: #e5e5e5;
-    --fg-em: #ffffff;
-    --fg-dm: #ded1ca;
-    --bg:    #212126;
-    --fc:    #2d3554;
-    --ac:    #326AB3;
+    --fg:    var(--grey5);
+    --fg-en: var(--grey6);
+    --fg-em:  white;
+    --fg-dm: var(--linen);
+    --bg: var(--charcoal);
+    --fc:     var(--navy);
+    --ac: var(--cerulean);
   }
 
 } // end :root

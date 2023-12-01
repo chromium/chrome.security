@@ -103,6 +103,16 @@ strong {
   text-align: right;
 }
 
+// Selection style for inline text
+p, span,
+h1, h2, h3, h4,
+li, a, strong, em {
+  &::selection {
+    background-color: var(--cobalt);
+    color: white;
+    text-shadow: 0.1em 0.1em 0 var(--charcoal);
+  }
+}
 
 // Strip link styling for block box links
 a.box {
