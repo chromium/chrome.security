@@ -88,3 +88,64 @@ hr.squiggle {
   from { background-position-x: 0;   }
   to {   background-position-x: 50vmax; }
 }
+
+@keyframes colourful {
+  0% { 
+    --linear-cover: 0%;
+  }
+  50% { 
+    --linear-cover: 50%;
+    --blue-x: 100%;
+    --blue-y: 100%;
+    --red-x: 0%;
+    --red-y: 100%;
+    --green-x: 100%;
+    --green-y: 0%;
+    --yellow-x: 0%;
+    --yellow-y: 0%;
+  }
+  62% {
+    --linear-cover: 40%;
+    --blue-x: 0%;
+    --blue-y: 100%;
+    --red-x: 0%;
+    --red-y: 0%;
+    --green-x: 100%;
+    --green-y: 100%;
+    --yellow-x: 100%;
+    --yellow-y: 0%;
+  }
+  75% {
+    --linear-cover: 65%;
+    --blue-x: 0%;
+    --blue-y: 0%;
+    --red-x: 100%;
+    --red-y: %;
+    --green-x: 0%;
+    --green-y: 100%;
+    --yellow-x: 100%;
+    --yellow-y: 100%;
+  }
+  87% {
+    --linear-cover: 75%;
+    --blue-x: 100%;
+    --blue-y: 0%;
+    --red-x: 100%;
+    --red-y: 100%;
+    --green-x: 0%;
+    --green-y: 0%;
+    --yellow-x: 0%;
+    --yellow-y: 100%;
+  }
+  100% {
+    --linear-cover: 75%;
+    --blue-x: 100%;
+    --blue-y: 100%;
+    --red-x: 0%;
+    --red-y: 100%;
+    --green-x: 100%;
+    --green-y: 0%;
+    --yellow-x: 0%;
+    --yellow-y: 0%;
+  }
+}

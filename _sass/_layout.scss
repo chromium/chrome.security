@@ -87,8 +87,22 @@ a.box {
   display: block;
   height: 100%;
   &:hover {
-    background-color: var(--fg);
-    color: var(--bg);
+    --linear-cover: 0%;
+    --blue-x: 100%;
+    --blue-y: 100%;
+    --red-x: 0%;
+    --red-y: 100%;
+    --green-x: 100%;
+    --green-y: 0%;
+    --yellow-x: 0%;
+    --yellow-y: 0%;
+    @include colourful;
+    animation: colourful 15s forwards;
+    color: white;
+    @include reducemotion {
+      background-color: var(--fg);
+      color: var(--bg);
+    }
   }
 }
 
