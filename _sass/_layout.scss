@@ -79,6 +79,9 @@
   @include query($bp-med){
     padding: var(--u2) var(--u4);
   }
+  @include query($bp-xlg){
+    padding: var(--u4) var(--u8);
+  }
 }
 
 // box links
@@ -87,22 +90,8 @@ a.box {
   display: block;
   height: 100%;
   &:hover {
-    --linear-cover: 0%;
-    --blue-x: 100%;
-    --blue-y: 100%;
-    --red-x: 0%;
-    --red-y: 100%;
-    --green-x: 100%;
-    --green-y: 0%;
-    --yellow-x: 0%;
-    --yellow-y: 0%;
-    @include colourful;
-    animation: colourful 15s forwards;
-    color: white;
-    @include reducemotion {
-      background-color: var(--fg);
-      color: var(--bg);
-    }
+    background-color: var(--fg);
+    color: var(--bg);
   }
 }
 

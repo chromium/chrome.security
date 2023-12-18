@@ -81,31 +81,6 @@ $bp-3xl: 2800px;
   place-items: center; // this centers child elements within the grid cell
 }
 
-@property --linear-cover {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 0%;
-}
-
-@property --blue-x { syntax: '<percentage>'; inherits: false; initial-value: 100%; }
-@property --blue-y { syntax: '<percentage>'; inherits: false; initial-value: 100%; }
-@property --red-x { syntax: '<percentage>'; inherits: false; initial-value: 0%; }
-@property --red-y { syntax: '<percentage>'; inherits: false; initial-value: 100%; }
-@property --green-x { syntax: '<percentage>'; inherits: false; initial-value: 100%; }
-@property --green-y { syntax: '<percentage>'; inherits: false; initial-value: 0%; }
-@property --yellow-x { syntax: '<percentage>'; inherits: false; initial-value: 0%; }
-@property --yellow-y { syntax: '<percentage>'; inherits: false; initial-value: 0%; }
-
-@mixin colourful { 
-  background-image:
-      radial-gradient(circle at var(--blue-x) var(--blue-y),var(--g-blue) 0%, transparent var(--linear-cover))
-     ,radial-gradient(circle at var(--red-x) var(--red-y),var(--g-red) 0%, transparent var(--linear-cover))
-     ,radial-gradient(circle at var(--green-x) var(--green-y),var(--g-green) 0%, transparent var(--linear-cover))
-     ,radial-gradient(circle at var(--yellow-x) var(--yellow-y),var(--g-yellow) 0%, transparent var(--linear-cover))
-     ,radial-gradient(var(--charcoal) 0%, var(--charcoal) 100%)
-    ;
-}
-
 // Import 3rd party fonts
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62,400;0,100,200;0,100,300;0,100,500;0,100,600;0,100,700;0,100,800;0,100,900;0,125,300;0,125,900;1,62,400;1,100,200;1,100,300;1,100,400;1,100,500;1,100,600;1,100,700;1,100,800;1,100,900;1,125,300&family=Inter:wght@300;400;700;900&display=swap');
 
