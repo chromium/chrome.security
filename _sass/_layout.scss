@@ -86,8 +86,11 @@ body {
       @include query($bp-lrg){
         grid-column: span 7;
       }
-      @include query($bp-2xl){
-        grid-column: span 6;
+      @include query($bp-xlg){
+        grid-column: span 9;
+      }
+      @include query($bp-3xl){
+        grid-column: span 10;
       }
     }
 
@@ -96,8 +99,11 @@ body {
       @include query($bp-lrg){
         grid-column: span 5;
       }
-      @include query($bp-2xl){
-        grid-column: span 6;
+      @include query($bp-xlg){
+        grid-column: span 3;
+      }
+      @include query($bp-3xl){
+        grid-column: span 2;
       }
     }
 

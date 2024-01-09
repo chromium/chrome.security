@@ -159,6 +159,10 @@ li:has(.box) {
   }
 }
 
+a {
+  color: var(--fg);
+}
+
 header {
   h1 + p { // subtitle
     &::before {
