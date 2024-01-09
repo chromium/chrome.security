@@ -1,13 +1,13 @@
 // Base type sizing
 
 html {
-  font-size: 16px; // note this affects layout sizing also
-  @include query($bp-2xl){
-    font-size: 18px;
-  }
-  @include query($bp-3xl){
-    font-size: 20px;
-  }
+  font-size: 14px; // note this affects layout sizing also
+  // @include query($bp-2xl){
+  //   font-size: 18px;
+  // }
+  // @include query($bp-3xl){
+  //   font-size: 20px;
+  // }
   @media only print {
     font-size: 11pt;
   }
@@ -99,6 +99,10 @@ strong {
 
 // Text alignment
 
+.text-center {
+  text-align: center;
+}
+
 .text-right {
   text-align: right;
 }
@@ -139,21 +143,32 @@ li:has(.box) {
   line-height: 1.2;
 }
 
+.f-hero,
+.f-xhr,
 .f-2xh,
 .f-3xh,
 .f-4xh {
-  line-height: 0.8;
+  line-height: 0.75;
   letter-spacing: -0.05em;
 }
 
-header {
+.f-3xh,
+.f-4xh {
+  @include query($bp-lrg){
+    line-height: 0.5;
+  }
+}
 
-  h1 + div p { // subtitle
+header {
+  h1 + p { // subtitle
     &::before {
       content: '“';
     }
     &::after {
       content: '”';
+    }
+    @include query($bp-lrg){
+      margin-top: 1rem;
     }
   }
 }
@@ -192,10 +207,10 @@ nav h2.grid-fours {
     @extend .wide;
     font-size: 1.16em;
   }
-  &:first-child {
-    padding-top: var(--s2);
-    padding-bottom: var(--s2);
-  }
+  // &:first-child {
+  //   padding-top: var(--s2);
+  //   padding-bottom: var(--s2);
+  // }
 }
 
 // article typographies

@@ -3,40 +3,44 @@ layout: default
 style: boxed
 ---
 
-<header class="box">
-  <h1 class="f-4xh black">chrome<wbr>.security</h1>
-  <p class="f-hero narrow lower">“Making it safe to click on links”</p>
+<header class="grid-12">
+  <div class="grid-ones box">
+    <h1 class="f-3xh black wide">chrome<wbr>.security</h1>
+    <p class="f-2xl narrow lower italic">Making it safe to click on links</p>
+  </div>
 </header>
 
 <main class="grid-12">
-
-  <section class="grid-twos-primary box featured">
-    <p>Chrome Security’s mission is to make it safe to click on links.</p>
-    <p>We have five focus areas:</p>
-    <ul>
-      <li><strong>Exploit Defense</strong>, which maintains the sandbox, secures process architecture, runs memory safety initiatives, and works to protect Chrome from hackers.</li>
-      <li><strong>Transport Security</strong>, which maintains the cryptography used by Chrome and secures Chrome’s encrypted network traffic.</li>
-      <li><strong>Counter Abuse</strong>, which aims to protect users from phishing, malware, and other scams and malicious content.</li>
-      <li><strong>Web Security</strong>, which works to ensure the core technology of the web is designed with security in mind.</li>
-      <li><strong>Bug Response</strong>, which ensures bugs in Chrome are found and patched quickly, via fuzzing and the Vulnerability Rewards Program.</li>
-    </ul>
-    <p>We provide the building blocks so that all of Chrome is built with security at front of mind.</p>
-  </section>
-
-  <div class="grid-twos-secondary box chromeball">
-    {% include chromeball-protect.svg %}
-  </div>
-
   <nav class="grid-ones">
     <ul class="grid-12">
-      <li class="grid-threes-lil"><a href="#" class="box">Core principles</a></li>
-      <li class="grid-threes-lil"><a href="#" class="box">Quarterly updates</a></li>
-      <li class="grid-threes-lil"><a href="#" class="box">Vulnerability Rewards</a></li>
+      <li class="grid-threes-lil"><a href="https://www.chromium.org/Home/chromium-security/core-principles/" class="box">Core principles</a></li>
+      <li class="grid-threes-lil"><a href="https://www.chromium.org/Home/chromium-security/quarterly-updates/" class="box">Quarterly updates</a></li>
+      <li class="grid-threes-lil"><a href="https://bughunters.google.com/about/rules/5745167867576320/chrome-vulnerability-reward-program-rules" class="box">Vulnerability Rewards</a></li>
     </ul>
   </nav>
 
+  <div class="grid-ones flex">
+    <section class="box featured">
+      <p>Chrome Security’s mission is to make it safe to click on links.</p>
+      <p>We have five focus areas:</p>
+      <ul>
+        <li><strong>Exploit Defense</strong>, which maintains the sandbox, secures process architecture, runs memory safety initiatives, and works to protect Chrome from hackers.</li>
+        <li><strong>Transport Security</strong>, which maintains the cryptography used by Chrome and secures Chrome’s encrypted network traffic.</li>
+        <li><strong>Counter Abuse</strong>, which aims to protect people from phishing, malware, and other scams and malicious content.</li>
+        <li><strong>Web Security</strong>, which works to ensure the core technology of the web is designed with security in mind.</li>
+        <li><strong>Bug Response</strong>, which ensures bugs in Chrome are found and patched quickly, via fuzzing and the <a href=""></a>Vulnerability Rewards Program.</li>
+      </ul>
+      <p>We provide the building blocks so that all of Chrome is built with security at front of mind.</p>
+    </section>
+
+    <figure class="box chromeball">
+      {% include chromeball-protect.svg %}
+    </figure>
+  </div>
+  
+
   <section class="grid-ones grid-12">
-    <h2 class="grid-ones box f-2xh black lower text-right">Recent blog posts</h2>
+    <h2 class="grid-ones box f-xhr black wide lower text-center">Recent blog posts</h2>
     <a href="#" class="grid-threes box">
       <article>
         <h3>Unlocking the power of TLS certificate automation for a safer and more reliable Internet</h3>
@@ -62,17 +66,21 @@ style: boxed
       </article>
     </a>
   </section>
+
+  <hr class="grid-ones squiggle box">
+
+  <section class="grid-ones grid-12">
+    <h2 class="grid-ones box f-xhr black wide lower text-right">Hand-crafted links for you</h2>
+    <section class="grid-fours"></section>
+  </section>
 </main>
 
 <footer>
-  <hr class="squiggle box">
   <nav>
     <ul class="grid-12">
-      <!-- <hr class="grid-ones squiggle"></hr> -->
-      <h2 class="grid-fours box">more links to click:</h2>
-      <li class="grid-fours"><a href="#" class="box">Chromium blog</a></li>
-      <li class="grid-fours"><a href="#" class="box">Google Security Blog</a></li>
-      <li class="grid-fours"><a href="#" class="box">Project Zero</a></li>
+      <li class="grid-threes-lil"><a href="#" class="box">Chromium blog</a></li>
+      <li class="grid-threes-lil"><a href="#" class="box">Google Security blog</a></li>
+      <li class="grid-threes-lil"><a href="#" class="box">Project Zero</a></li>
     </ul>
   </nav>
 </footer>

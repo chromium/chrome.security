@@ -38,7 +38,7 @@
     --f-cemi: var(--f-20);
     --f-lrg:  var(--f-20);
     --f-xlg:  var(--f-24);
-    --f-2xl:  var(--f-24);
+    --f-2xl:  var(--f-32);
     --f-hero: var(--f-32);
     --f-xhr:  var(--f-32);
     --f-2xh:  var(--f-48);
@@ -49,13 +49,13 @@
       --f-hero: var(--f-48);
       --f-xhr:  var(--f-48);
       --f-2xh:  var(--f-60);
-      --f-3xh:  var(--f-72);
       --f-4xh:  var(--f-72);
     }
     @include query($bp-med){
       --f-semi: var(--f-20);
       --f-lrg:  var(--f-24);
-      --f-2xl:  var(--f-32);
+      --f-2xl:  var(--f-48);
+      --f-3xh:  var(--f-72);
       --f-4xh:  var(--f-96);
     }
     @include query($bp-lrg){
@@ -102,20 +102,21 @@
     --s6: var(--u6);
     --s8: var(--u8);
     @include query($bp-sml){
-      --s2: var(--u3);
       --s8: var(--u10);
     }
     @include query($bp-med){
-      --s2: var(--u4);
+      --s2: var(--u3);
       --s4: var(--u8);
+      --s6: var(--u10);
     }
     @include query($bp-lrg){
       --s1: var(--u2);
-      --s2: var(--u5);
+      --s2: var(--u4);
       --s8: var(--u12);
     }
     @include query($bp-xlg){
       --s2: var(--u6);
+      --s6: var(--u12);
       --s8: var(--u16);
     }
 
