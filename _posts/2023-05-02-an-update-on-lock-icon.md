@@ -4,7 +4,7 @@ author: David Adrian, Serena Chen, Joe DeBlasio, Emily Stark, and Emanuel von Ze
 date: 2023-05-02
 source-url: https://blog.chromium.org/2023/05/an-update-on-lock-icon.html
 source-blog: Chromium Blog
-excerpt: 
+excerpt: Browsers have shown a lock icon when a site loads over HTTPS since the early versions of Netscape in the 1990s. For the last decade, Chrome participated in a major initiative to increase HTTPS adoption on the web, and to help make the web secure by default. As late as 2013, only 14% of the Alexa Top 1M sites supported HTTPS. Today, however, HTTPS has become the norm and over 95% of page loads in Chrome on Windows are over a secure channel using HTTPS. This is great news for the ecosystem; it also creates an opportunity to re-evaluate how we signal security protections in the browser. In particular, the lock icon.
 ---
 
 _Editor's note: based on industry research (from Chrome and others), and the ubiquity of HTTPS, we will be replacing the lock icon in Chrome's address bar with a new "tune" icon -- both to emphasize that security should be the default state, and to make site settings more accessible. Read on to learn about this multi-year journey._

@@ -4,7 +4,6 @@ author: Joe DeBlasio, Chrome Security team
 date: 2023-08-16
 source-url: https://blog.chromium.org/2023/08/towards-https-by-default.html
 source-blog: Chromium blog
-excerpt: 
 ---
 
 For the past several years, [more than 90%](https://transparencyreport.google.com/https/overview?hl=en) of Chrome users' navigations have been to HTTPS sites, across all major platforms. Thankfully, that means that most traffic is encrypted and authenticated, and thus safe from network attackers. However, a stubborn 5-10% of traffic has remained on HTTP, allowing attackers to eavesdrop on or change that data. Chrome shows a warning in the address bar when a connection to a site is not secure, but we believe this is insufficient: not only do many people not notice that warning, but by the time someone notices the warning, the damage may already have been done.

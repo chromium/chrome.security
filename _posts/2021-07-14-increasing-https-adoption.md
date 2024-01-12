@@ -4,7 +4,6 @@ author: Shweta Panditrao, Devon O'Brien, Emily Stark, Google Chrome team
 date: 2021-07-14
 source-url: https://blog.chromium.org/2021/07/increasing-https-adoption.html
 source-blog: Chromium Blog
-excerpt: 
 ---
 
 When a browser connects to websites over HTTPS (vs. HTTP), eavesdroppers and attackers on the network can't intercept or alter the data that's shared over that connection (including personal info, or even the page itself). This level of privacy and security is vital for the web ecosystem, so Chrome [continues](https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html) [to](https://blog.chromium.org/2020/02/protecting-users-from-insecure.html) [invest](https://blog.chromium.org/2021/03/a-safer-default-for-navigation-https.html) in making HTTPS more widely supported.

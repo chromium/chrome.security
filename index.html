@@ -37,40 +37,27 @@ style: boxed
       {% include chromeball-protect.svg %}
     </figure>
   </div>
-  
 
   <section class="grid-ones grid-12">
     <h2 class="grid-ones box f-xhr black wide lower text-center">Recent blog posts</h2>
-    <a href="#" class="grid-threes box">
+    {% for post in site.posts limit:3 %}
+    <a href="{{ post.source-url }}" class="grid-threes box">
       <article>
-        <h3>Unlocking the power of TLS certificate automation for a safer and more reliable Internet</h3>
-        <p class="blog-meta">Wednesday, October 11, 2023</p>
-        <p class="blog-excerpt">TL;DR: Automated certificate issuance and management strengthens the underlying security assurances provided by Transport Layer Security (TLS) by increasing agility and resilience. This post describes the benefits of automation and upcoming changes to the Chrome Root Program policy that represent Chrome Security’s ongoing commitment to improving web security.</p>
+        
+        <h3>{{ post.title }}</h3>
+        <p class="blog-meta">{{ post.date }}</p>
+        <p class="blog-excerpt">{{ post.excerpt | strip_html }}</p>
         <p class="linkstyle text-right">Keep reading</p>
+      
       </article>
     </a>
-    <a href="#" class="grid-threes box">
-      <article>
-        <h3>Towards HTTPS by default</h3>
-        <p class="blog-meta">Wednesday, August 16, 2023</p>
-        <p class="blog-excerpt">For the past several years, more than 90% of Chrome users' navigations have been to HTTPS sites, across all major platforms. Thankfully, that means that most traffic is encrypted and authenticated, and thus safe from network attackers. However, a stubborn 5-10% of traffic has remained on HTTP, allowing attackers to eavesdrop on or change that data. Chrome shows a warning in the address bar when a connection to a site is not secure, but we believe this is insufficient: not only do many people not notice that warning, but by the time someone notices the warning, the damage may already have been done.</p>
-        <p class="linkstyle text-right">Keep reading</p>
-      </article>
-    </a>
-    <a href="#" class="grid-threes box">
-      <article>
-        <h3>Protecting Chrome Traffic with Hybrid Kyber KEM</h3>
-        <p class="blog-meta">Thursday, August 10, 2023</p>
-        <p class="blog-excerpt">Teams across Google are working hard to prepare the web for the migration to quantum-resistant cryptography. Continuing with our strategy for handling this major transition, we are updating technical standards, testing and deploying new quantum-resistant algorithms, and working with the broader ecosystem to help ensure this effort is a success.</p>
-        <p class="linkstyle text-right">Keep reading</p>
-      </article>
-    </a>
+    {% endfor %}
   </section>
 
   <hr class="grid-ones squiggle box">
 
   <section class="grid-ones grid-12">
-    <h2 class="grid-ones box f-xhr black wide lower text-right">Hand-crafted links for ✨you✨</h2>
+    <h2 class="grid-ones box f-xhr black wide lower text-right">Hand-crafted links for you</h2>
     <section class="grid-fours box">
       <h4 class="f-xlg thick">For <strong>security researchers</strong>...</h4>
       <ul>

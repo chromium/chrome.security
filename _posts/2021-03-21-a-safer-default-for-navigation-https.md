@@ -4,7 +4,6 @@ author: Shweta Panditrao and Mustafa Emre Acer, Chrome team
 date: 2021-03-21
 source-url: https://blog.chromium.org/2021/03/a-safer-default-for-navigation-https.html
 source-blog: Chromium Blog
-excerpt: 
 ---
 
 Starting in version 90, Chrome's address bar will use *https://* by default, improving privacy and even loading speed for users visiting websites that support HTTPS. Chrome users who navigate to websites by manually typing a URL often don't include "http://" or "https://". For example, users often type "example.com" instead of "https://example.com" in the address bar. In this case, if it was a user's first visit to a website, Chrome would previously choose *http://* as the default protocol^1^. This was a practical default in the past, when much of the web did not support HTTPS.

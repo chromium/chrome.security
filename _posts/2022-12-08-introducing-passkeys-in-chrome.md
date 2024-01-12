@@ -4,7 +4,6 @@ author: Ali Sarraf, Product Manager, Chrome
 date: 2022-12-08
 source-url: https://blog.chromium.org/2022/12/introducing-passkeys-in-chrome.html
 source-blog: Chromium Blog
-excerpt: 
 ---
 
 We [announced in October](https://android-developers.googleblog.com/2022/10/bringing-passkeys-to-android-and-chrome.html) that passkey support was available in Chrome Canary. Today, we are pleased to announce that passkey support is now available in Chrome Stable M108.

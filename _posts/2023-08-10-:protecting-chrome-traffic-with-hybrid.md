@@ -3,8 +3,7 @@ title: Protecting Chrome Traffic with Hybrid Kyber KEM
 author: Devon O'Brien, Technical Program Manager, Chrome Security 
 date: 2023-08-10
 source-url: https://blog.chromium.org/2023/08/protecting-chrome-traffic-with-hybrid.html
-source-blog:
-excerpt: 
+source-blog: Chromium Blog
 ---
 
 Teams across Google are working hard to prepare the web for the migration to quantum-resistant cryptography. Continuing with our [strategy](https://cloud.google.com/blog/products/identity-security/how-google-is-preparing-for-a-post-quantum-world) for handling this major transition, we are updating technical standards, testing and deploying new quantum-resistant algorithms, and working with the broader ecosystem to help ensure this effort is a success.

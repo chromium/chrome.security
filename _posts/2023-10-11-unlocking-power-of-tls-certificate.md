@@ -4,7 +4,6 @@ author: "Chrome Root Program, Chrome Security Team"
 date: 2023-10-11
 source-url: https://blog.chromium.org/2023/10/unlocking-power-of-tls-certificate.html
 source-blog: Chromium blog
-excerpt: 
 ---
 
 TL;DR: Automated certificate issuance and management strengthens the underlying security assurances provided by Transport Layer Security (TLS) by increasing agility and resilience. This post describes the benefits of automation and upcoming changes to the Chrome Root Program policy that represent Chrome Security's ongoing commitment to improving web security.

@@ -4,7 +4,6 @@ author: Mike West, on behalf of Chrome's Web Platform Security team
 date: 2021-03-12
 source-url: https://blog.chromium.org/2021/03/mitigating-side-channel-attacks.html
 source-blog: Chromium Blog
-excerpt: 
 ---
 
 The web platform relies on the [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) as a fundamental security boundary, and browsers do a pretty good job at preventing *explicit* leakage of data from one origin to another. Attacks like [Spectre](https://spectreattack.com/), however, show that we still have work to do to mitigate *implicit* data leakage. The side-channels exploited through these attacks prove that [attackers can read any data which enters a process hosting that attackers' code](https://chromium.googlesource.com/chromium/src/+/master/docs/security/side-channel-threat-model.md#introduction). These attacks are [quite practical](https://security.googleblog.com/2021/03/a-spectre-proof-of-concept-for-spectre.html) today, and pose a real risk to users.

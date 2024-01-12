@@ -4,7 +4,6 @@ author: Joshua Cruz, Communications Manager
 date: 2023-08-03
 source-url: https://blog.chromium.org/2023/08/redesigning-chrome-downloads-to-keep.html
 source-blog: Chromium blog
-excerpt: 
 ---
 
 [![Main image of blog post that showcases the new download experience for Chrome on the right side of the Chrome Address bar.](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_Wk6hUyNuwt82auTtHqsRHsnhylPD_2MDzrPZAsUiZdrBPVnVKmJuOXgiUJU-qWB0sTXV8ViI7A7pX4nl8fu4JDsQbWGUWoLQFOrWyh_-eWpvMrvJLrEn_LeDI8bmHAdQSzPAuHgeNzjZ3UHv_QBBcLXnJme9ctfO-szOUh_sxGZFrzkPfnEqo9-fw6st/s16000/DownloadsUI_Header.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_Wk6hUyNuwt82auTtHqsRHsnhylPD_2MDzrPZAsUiZdrBPVnVKmJuOXgiUJU-qWB0sTXV8ViI7A7pX4nl8fu4JDsQbWGUWoLQFOrWyh_-eWpvMrvJLrEn_LeDI8bmHAdQSzPAuHgeNzjZ3UHv_QBBcLXnJme9ctfO-szOUh_sxGZFrzkPfnEqo9-fw6st/s6001/DownloadsUI_Header.png)

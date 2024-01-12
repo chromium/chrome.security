@@ -4,7 +4,6 @@ author: Ryan Dickson, Chris Clements, Emily Stark from Chrome Security
 date: 2022-09-19
 source-url: https://blog.chromium.org/2022/09/announcing-launch-of-chrome-root-program.html
 source-blog: Chromium Blog
-excerpt: 
 ---
 
 In 2020, we [announced](https://groups.google.com/g/mozilla.dev.security.policy/c/3Q36J4flnQs/m/VyWFiVwrBQAJ) we were in the early phases of establishing the Chrome Root Program and launching the Chrome Root Store.
