@@ -112,6 +112,10 @@ body {
     @include query($bp-med){
       grid-column: span 4;
     }
+    .box {
+      padding-top: var(--s1);
+      padding-bottom: var(--s1);
+    }
   }
 
   .grid-threes {
@@ -148,6 +152,15 @@ body {
       grid-column: span 2;
     }
   }
+
+// centering
+.xy-center {
+  @include xy-center;
+}
+
+.y-center {
+  @include y-center;
+}
 
 // border box styling
 .box {

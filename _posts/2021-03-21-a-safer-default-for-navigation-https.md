@@ -1,6 +1,6 @@
 ---
 title: A safer default for navigation
-author: Shweta Panditrao and Mustafa Emre Acer, Chrome team
+author: Shweta Panditrao and Mustafa Emre Acer
 date: 2021-03-21
 source-url: https://blog.chromium.org/2021/03/a-safer-default-for-navigation-https.html
 source-blog: Chromium Blog

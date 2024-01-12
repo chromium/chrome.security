@@ -1,6 +1,6 @@
 ---
 title: "Unlocking the power of TLS certificate automation for a safer and more reliable Internet"
-author: "Chrome Root Program, Chrome Security Team"
+author: "Chrome Root Program"
 date: 2023-10-11
 source-url: https://blog.chromium.org/2023/10/unlocking-power-of-tls-certificate.html
 source-blog: Chromium blog

@@ -1,6 +1,6 @@
 ---
 title: Increasing HTTPS adoption
-author: Shweta Panditrao, Devon O'Brien, Emily Stark, Google Chrome team
+author: Shweta Panditrao, Devon O'Brien, Emily Stark
 date: 2021-07-14
 source-url: https://blog.chromium.org/2021/07/increasing-https-adoption.html
 source-blog: Chromium Blog

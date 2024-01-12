@@ -143,6 +143,8 @@ li:has(.box) {
   line-height: 1.2;
 }
 
+.f-xlg,
+.f-2xl,
 .f-hero,
 .f-xhr,
 .f-2xh,
@@ -230,7 +232,8 @@ article {
     @extend .f-med;
     text-transform: uppercase;
     letter-spacing: 0.25em;
-    line-height: var(--u4);
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
   }
   p.blog-excerpt {
     @extend .f-semi;

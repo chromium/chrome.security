@@ -1,6 +1,6 @@
 ---
 title: Announcing the Launch of the Chrome Root Program
-author: Ryan Dickson, Chris Clements, Emily Stark from Chrome Security
+author: Ryan Dickson, Chris Clements, Emily Stark
 date: 2022-09-19
 source-url: https://blog.chromium.org/2022/09/announcing-launch-of-chrome-root-program.html
 source-blog: Chromium Blog

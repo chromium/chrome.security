@@ -1,6 +1,6 @@
 ---
 title: Protecting Chrome Traffic with Hybrid Kyber KEM
-author: Devon O'Brien, Technical Program Manager, Chrome Security 
+author: Devon O'Brien, Technical Program Manager 
 date: 2023-08-10
 source-url: https://blog.chromium.org/2023/08/protecting-chrome-traffic-with-hybrid.html
 source-blog: Chromium Blog

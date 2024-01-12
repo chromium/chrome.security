@@ -1,6 +1,6 @@
 ---
 title: Towards HTTPS by default
-author: Joe DeBlasio, Chrome Security team
+author: Joe DeBlasio
 date: 2023-08-16
 source-url: https://blog.chromium.org/2023/08/towards-https-by-default.html
 source-blog: Chromium blog

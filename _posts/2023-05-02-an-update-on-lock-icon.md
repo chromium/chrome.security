@@ -1,6 +1,6 @@
 ---
 title: An Update on the Lock Icon
-author: David Adrian, Serena Chen, Joe DeBlasio, Emily Stark, and Emanuel von Zezschwitz, and the rest of Chrome Trusty Transport from the Chrome Security team
+author: David Adrian, Serena Chen, Joe DeBlasio, Emily Stark, and Emanuel von Zezschwitz, and the rest of Chrome Trusty Transport
 date: 2023-05-02
 source-url: https://blog.chromium.org/2023/05/an-update-on-lock-icon.html
 source-blog: Chromium Blog
