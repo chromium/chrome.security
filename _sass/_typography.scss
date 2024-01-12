@@ -157,7 +157,7 @@ li:has(.box) {
 .f-3xh,
 .f-4xh {
   @include query($bp-lrg){
-    line-height: 0.5;
+    line-height: 0.65;
   }
 }
 

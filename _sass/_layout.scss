@@ -134,7 +134,10 @@ body {
 
   .grid-fours {
     grid-column: span 12;
-    @include query($bp-sml){
+    @include query($bp-med){
+      grid-column: span 6;
+    }
+    @include query($bp-xlg){
       grid-column: span 3;
     }
   }

@@ -56,7 +56,7 @@ style: boxed
     {% endfor %}
   </section>
 
-  <section class="grid-ones grid-12">
+<!--   <section class="grid-ones grid-12">
     <h2 class="grid-ones box f-xhr black wide lower text-right">Hand-crafted links for you</h2>
     <section class="grid-fours box">
       <h4 class="f-xlg thick">For <strong>security researchers</strong>...</h4>
@@ -98,7 +98,25 @@ style: boxed
         <li><a href="#">Some links for you</a></li>
       </ul>
     </section>
+  </section> -->
+
+  <section class="grid-ones grid-12">
+    <!-- <h2 class="grid-ones box f-xhr black wide lower text-center">Even more posts!!11!1!oneeleven</h2> -->
+    {% for post in site.posts limit:8 offset:3 %}
+    {% unless list=false %}
+    <a href="{{ post.source-url }}" class="grid-fours box">
+      <article>
+        <p class="blog-meta">{{ post.date | date: "%A %e %B, %Y" }}</p>
+        <h3>{{ post.title }}</h3>
+        <p class="blog-meta">{{ post.author }}</p>
+        <p class="blog-excerpt">{{ post.excerpt | strip_html }}</p>
+        <p class="linkstyle text-right">Keep reading</p>
+      </article>
+    </a>
+    {% endunless %}
+    {% endfor %}
   </section>
+
 </main>
 
 <footer>
