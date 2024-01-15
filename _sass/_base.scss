@@ -206,3 +206,19 @@ img {
     filter: contrast(0.8);
   }
 }
+
+// custom cursors
+
+body {
+  cursor: url(../images/cursor.png) 2 2, auto;
+}
+
+p:not(a p),
+span:not(a span),
+li:not(a li) {
+  cursor: url(../images/text.png) 8 24, pointer;
+}
+
+a {
+  cursor: url(../images/pointer.png) 10 2, pointer;
+}

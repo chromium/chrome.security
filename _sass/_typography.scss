@@ -177,6 +177,9 @@ header {
       margin-top: 1rem;
     }
   }
+  @include querydown($bp-lrg){
+    line-height: 1;
+  }
 }
 
 nav a.box,

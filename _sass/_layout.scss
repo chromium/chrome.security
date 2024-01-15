@@ -40,6 +40,11 @@ body {
   }
 }
 
+// decorative, hidden elements
+.hidden {
+  display: none;
+}
+
 // flex
 .flex {
   display: flex;
@@ -242,14 +247,13 @@ article {
 }
 
   #chromeball-protect {
-    max-width: 32rem;
   }
 
 hr.squiggle {
   position: relative;
   padding: 0;
   border: none;
-  height: var(--s8);
+  height: var(--s4);
   mix-blend-mode: difference;
   &::before {
     content:'';

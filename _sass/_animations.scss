@@ -56,32 +56,32 @@ hr.squiggle::before {
 
 @keyframes rotate {
   from { transform: rotate(0deg);    }
-  to {   transform: rotate(-360deg); }
+  to {   transform: rotate(calc(5 * -360deg)); }
 }
 
 @keyframes rotate-back {
   from { transform: rotate(0deg);    }
-  to {   transform: rotate(360deg); }
+  to {   transform: rotate(calc(5 * 360deg)); }
 }
 
 @keyframes rotate-chromeball {
   from { transform: rotate(0deg);   }
-  to {   transform: rotate(-180deg); }
+  to {   transform: rotate(calc(5 * -180deg)); }
 }
 
 @keyframes rotate-circle-dotted-inner {
   from { transform: rotate(0deg);  }
-  to {   transform: rotate(60deg); }
+  to {   transform: rotate(calc(5 * 60deg)); }
 }
 
 @keyframes rotate-circle-dotted-middle {
   from { transform: rotate(0deg);    }
-  to {   transform: rotate(-60deg); }
+  to {   transform: rotate(calc(5 * -60deg)); }
 }
 
 @keyframes rotate-circle-dotted-outer {
   from { transform: rotate(0deg);   }
-  to {   transform: rotate(30deg); }
+  to {   transform: rotate(calc(5 * 30deg)); }
 }
 
 @keyframes scroll-bg-x {

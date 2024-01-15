@@ -53,6 +53,7 @@ style: boxed
         <p class="linkstyle text-right">Keep reading</p>
       </article>
     </a>
+    <hr class="hidden">
     {% endfor %}
   </section>
 
@@ -100,10 +101,11 @@ style: boxed
     </section>
   </section> -->
 
+  <hr class="grid-ones squiggle">
+
   <section class="grid-ones grid-12">
-    <!-- <h2 class="grid-ones box f-xhr black wide lower text-center">Even more posts!!11!1!oneeleven</h2> -->
+    <h2 class="grid-ones box f-xhr black wide lower text-center">Even more posts!!11!1!oneeleven</h2>
     {% for post in site.posts limit:8 offset:3 %}
-    {% unless list=false %}
     <a href="{{ post.source-url }}" class="grid-fours box">
       <article>
         <p class="blog-meta">{{ post.date | date: "%A %e %B, %Y" }}</p>
@@ -113,11 +115,13 @@ style: boxed
         <p class="linkstyle text-right">Keep reading</p>
       </article>
     </a>
-    {% endunless %}
+    <hr class="hidden">
     {% endfor %}
   </section>
 
 </main>
+
+<hr class="grid-ones squiggle">
 
 <footer>
   <nav>
@@ -128,6 +132,3 @@ style: boxed
     </ul>
   </nav>
 </footer>
-
-
-<hr class="grid-ones squiggle">

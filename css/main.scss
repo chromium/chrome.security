@@ -18,6 +18,12 @@ $bp-3xl: 2800px;
   }
 }
 
+@mixin querydown($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
 @mixin dark() {
   @media only screen and (prefers-color-scheme: dark) {
     @content
