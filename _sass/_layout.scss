@@ -13,12 +13,8 @@ body {
   }
   @include query($bp-lrg){
     padding: var(--s1);
-    // max-width: 90rem;
     margin: 0 auto;
   }
-  // @include query($bp-2xl){
-  //   max-width: 112rem;
-  // }
   // Background noise image
   &::before {
     z-index: -1;
@@ -30,10 +26,10 @@ body {
     opacity: 0.1;
     width: 100vw;
     height: 100vh;
-    background-image: url(../images/noise.gif);
+    background-image: url(../images/the_color_of_television_tuned_to_a_dead_channel.gif);
     background-repeat: repeat;
     @include reducemotion {
-      background-image: url(../images/noise.avif);
+      background-image: url(../images/the_color_of_television_tuned_to_a_dead_channel.avif);
       filter: brightness(0.5) contrast(2);
       opacity: 0.1;
     }
