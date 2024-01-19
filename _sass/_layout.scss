@@ -221,7 +221,12 @@ header .box {
 .framed {
   --placement: 0;
   --corner: 8px;
-  --img: url("../images/corner.svg");
+  // --img: url("../images/corner.svg");
+  // &.crosshair {
+  //   --placement: -8px;
+  //   --corner: 16px;
+  //   --img: url("../images/crosshair.svg");
+  // }
   display: none;
   @include query($bp-xlg){
     display: initial;
@@ -238,7 +243,7 @@ header .box {
       position: absolute;
       height: var(--corner);
       width: var(--corner);
-      background-image: var(--img);
+      background-image: url("../images/corner.svg");
     }
     .NW {
       top: var(--placement);
@@ -262,12 +267,6 @@ header .box {
   }
 }
 
-.framed.crosshair {
-    --placement: -8px;
-    --corner: 16px;
-    --img: url("../images/crosshair.svg");
-  }
-
 h2.grid-ones {
   padding-top: var(--s2);
   padding-bottom: var(--s2);
@@ -276,7 +275,7 @@ h2.grid-ones {
 article {
   padding-top: var(--s2);
   padding-bottom: var(--s2);
-  @include query($bp-lrg){
+  @include query($bp-lrg) {
     padding-top: var(--s1);
     padding-bottom: var(--s1);
   }
@@ -292,7 +291,7 @@ article {
 // decorative
 
 .chromeball {
-  @include xy-center
+  @include xy-center;
   @include querydown($bp-sml){
     padding: var(--s8);
   }
