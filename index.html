@@ -15,12 +15,12 @@ style: boxed
     <ul class="grid-12">
       <li class="grid-threes-lil"><a href="https://www.chromium.org/Home/chromium-security/core-principles/" class="box">Core principles</a></li>
       <li class="grid-threes-lil"><a href="https://www.chromium.org/Home/chromium-security/quarterly-updates/" class="box">Quarterly updates</a></li>
-      <li class="grid-threes-lil"><a href="https://bughunters.google.com/about/rules/5745167867576320/chrome-vulnerability-reward-program-rules" class="box">Vulnerability Awards</a></li>
+      <li class="grid-threes-lil"><a href="https://bughunters.google.com/about/rules/5745167867576320/chrome-vulnerability-reward-program-rules" class="box">Vulnerability Rewards</a></li>
     </ul>
   </nav>
 
   <div class="grid-ones grid-12">
-    <section class="grid-twos-primary box y-center">
+    <section class="grid-twos-primary box xy-center">
       <div class="featured">
         <p>Chrome Security’s mission is to make it safe to click on links.</p>
         <p>We have five focus areas:</p>
@@ -32,6 +32,7 @@ style: boxed
           <li><strong>Bug Response</strong>, which ensures bugs in Chrome are found and patched quickly, via fuzzing and the <a href=""></a>Vulnerability Rewards Program.</li>
         </ul>
         <p>We provide the building blocks so that all of Chrome is built with security at front of mind.</p>
+        {% include frame.html %}
       </div>
       
     </section>
@@ -56,6 +57,9 @@ style: boxed
     <hr class="hidden">
     {% endfor %}
   </section>
+
+  <!-- Links to talks and papers published by the team -->
+  <!-- "I have a bug to file, what do I do?" linkto VRP, buganizer, docs for security settings -->
 
 <!--   <section class="grid-ones grid-12">
     <h2 class="grid-ones box f-xhr black wide lower text-right">Hand-crafted links for you</h2>

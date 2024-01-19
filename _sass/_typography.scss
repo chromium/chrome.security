@@ -150,7 +150,7 @@ li:has(.box) {
 .f-2xh,
 .f-3xh,
 .f-4xh {
-  line-height: 0.75;
+  line-height: 0.8;
   letter-spacing: -0.05em;
 }
 
@@ -173,9 +173,7 @@ header {
     &::after {
       content: '”';
     }
-    @include query($bp-lrg){
-      margin-top: 1rem;
-    }
+    margin-top: 1rem;
   }
   @include querydown($bp-lrg){
     line-height: 1;

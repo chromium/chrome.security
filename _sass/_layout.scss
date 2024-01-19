@@ -23,7 +23,8 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    opacity: 0.1;
+    opacity: 0.05;
+    // filter: blur(1px);
     width: 100vw;
     height: 100vh;
     background-image: url(../images/the_color_of_television_tuned_to_a_dead_channel.gif);
@@ -77,14 +78,14 @@ body {
 
   .grid-twos {
     grid-column: span 12;
-    @include query($bp-lrg){
+    @include query($bp-med){
       grid-column: span 6;
     }
   }
 
     .grid-twos-primary {
       grid-column: span 12;
-      @include query($bp-lrg){
+      @include query($bp-med){
         grid-column: span 7;
       }
       @include query($bp-xlg){
@@ -97,7 +98,7 @@ body {
 
     .grid-twos-secondary {
       grid-column: span 12;
-      @include query($bp-lrg){
+      @include query($bp-med){
         grid-column: span 5;
       }
       @include query($bp-xlg){
@@ -113,9 +114,11 @@ body {
     @include query($bp-med){
       grid-column: span 4;
     }
-    .box {
-      padding-top: var(--s1);
-      padding-bottom: var(--s1);
+    @include query($bp-med){
+      .box {
+        padding-top: var(--s1);
+        padding-bottom: var(--s1);
+      }
     }
   }
 
@@ -184,35 +187,85 @@ body {
 a { @include transit; }
 a.box {
   display: block;
-  //   height: 100%;
-  // @include query($bp-lrg){
-  //   height: calc(100% - var(--u1));
-  // }
-  // @include query($bp-2xl){
-  //   height: calc(100% - var(--u2));
-  // }
+    height: 100%;
+  @include query($bp-lrg){
+    height: calc(100% - var(--u2));
+  }
+  @include query($bp-2xl){
+    height: calc(100% - var(--u2));
+  }
   &:hover {
     background-color: var(--fg);
     color: var(--bg);
   }
 }
 
-nav .flex {
-  height: 100%;
-  flex-direction: column;
-  align-items: stretch;
-  li {
-    flex: 1 0 auto;
-  }
-  .box {
-    display: flex;
-    align-items: center;
-  }
-}
-
 header .box {
   padding-top: var(--s8);
   padding-bottom: var(--s2);
+  box-shadow: none;
+}
+
+.featured {
+  position: relative;
+  @include query($bp-xlg){
+    max-width: 40em;
+    padding: var(--s2);
+  }
+  @include query($bp-3xl){
+    margin: var(--s2);
+    padding: var(--s2);
+  }
+}
+
+.framed {
+  --placement: 0;
+  --corner: 8px;
+  --img: url("../images/corner.svg");
+  &.crosshair {
+    --placement: -8px;
+    --corner: 16px;
+    --img: url("../images/crosshair.svg");
+  }
+  display: none;
+  @include query($bp-xlg){
+    display: initial;
+    position: absolute;
+    z-index: -1;
+    top: var(--placement);
+    left: var(--placement);
+    bottom: var(--placement);
+    right: var(--placement);
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: difference;
+    .NW, .NE, .SW, .SE {
+      position: absolute;
+      height: var(--corner);
+      width: var(--corner);
+      background-image: var(--img);
+    }
+    .NW {
+      top: var(--placement);
+      left: var(--placement);
+    }
+    .NE {
+      top: var(--placement);
+      right: var(--placement);
+      rotate: 90deg;
+    }
+    .SE {
+      bottom: var(--placement);
+      right: var(--placement);
+      rotate: 180deg;
+    }
+    .SW {
+      bottom: var(--placement);
+      left: var(--placement);
+      rotate: 270deg;
+    }
+  }
+  
 }
 
 h2.grid-ones {
@@ -240,7 +293,15 @@ article {
 
 .chromeball {
   @include xy-center
+  @include querydown($bp-sml){
+    padding: var(--s8);
+  }
+  @include querydown($bp-lrg){
+    padding: var(--s2);
+  }
 }
+
+// make it smaller on mobile views
 
   #chromeball-protect {
   }
@@ -252,13 +313,26 @@ hr.squiggle {
   height: var(--s4);
   mix-blend-mode: difference;
   &::before {
+    --margin-tb: var(--u1);
+    --margin-lr: calc(var(--s1) / 2);
     content:'';
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/squiggle.svg");
+    width: calc(100% - 2 * var(--margin-lr));
+    height: calc(100% - 2 * var(--margin-tb));
+    margin: var(--margin-tb) var(--s1);
+    background-image: url("../images/lines.svg");
     background-repeat: repeat-x;
-    background-position-y: center;
+    background-position-y: bottom;
     background-color: black;
+  }
+  &::after {
+    content:'';
+    position: absolute;
+    height: 100%;
+    aspect-ratio: 1.5 / 1;
+    background-image: url(../images/chrome_dino.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
   }
 }

@@ -53,12 +53,12 @@
     }
     @include query($bp-med){
       --f-semi: var(--f-20);
-      --f-lrg:  var(--f-24);
       --f-2xl:  var(--f-48);
       --f-3xh:  var(--f-72);
       --f-4xh:  var(--f-96);
     }
     @include query($bp-lrg){
+      --f-lrg:  var(--f-24);
       --f-hero: var(--f-48);
       --f-xhr:  var(--f-60);
       --f-2xh:  var(--f-72);

@@ -1,4 +1,4 @@
-<svg id="chromeball-protect" viewBox="0 0 562 562" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 40rem">
+<svg id="chromeball-protect" viewBox="0 0 562 562" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 35rem">
 	<circle id="circle-dotted-outer" cx="281" cy="281" r="280" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 8"/>
 	<circle id="circle-dotted-middle" cx="281" cy="281" r="260" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 16"/>
 	<circle id="circle-dotted-inner" cx="281" cy="281" r="210" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 24"/>
