@@ -222,11 +222,6 @@ header .box {
   --placement: 0;
   --corner: 8px;
   --img: url("../images/corner.svg");
-  &.crosshair {
-    --placement: -8px;
-    --corner: 16px;
-    --img: url("../images/crosshair.svg");
-  }
   display: none;
   @include query($bp-xlg){
     display: initial;
@@ -265,8 +260,13 @@ header .box {
       rotate: 270deg;
     }
   }
-  
 }
+
+.framed.crosshair {
+    --placement: -8px;
+    --corner: 16px;
+    --img: url("../images/crosshair.svg");
+  }
 
 h2.grid-ones {
   padding-top: var(--s2);
