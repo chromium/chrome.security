@@ -136,6 +136,7 @@
   --linen: #ded1ca;
   --navy: #2d3554;
   --cerulean: #326AB3;
+  --bluescreen: #000585;
 
   // brights
   --cobalt: #0040ff;
@@ -161,7 +162,7 @@
     --fg-en: var(--grey6);
     --fg-em:  white;
     --fg-dm: var(--linen);
-    --bg: var(--charcoal);
+    --bg: var(--bluescreen);
     --fc:     var(--navy);
     --ac: var(--cerulean);
   }

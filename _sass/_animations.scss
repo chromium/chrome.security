@@ -31,9 +31,9 @@
 
 // Squiggle hr
 
-hr.squiggle::before {
+hr.dino::before {
   animation: 
-    scroll-bg-x 100s linear infinite
+    scroll-bg-x 50s linear infinite
    ,scroll-bg-x 1ms ease-in-out
   ;
 }
@@ -44,7 +44,7 @@ hr.squiggle::before {
 #circle-dotted-inner,
 #circle-dotted-middle,
 #circle-dotted-outer,
-hr.squiggle::before {
+hr.dino::before {
   transform-origin: center center;
   // animation-duration: 1ms; // Firefox requires this to apply the animation
   animation-timeline: auto, --scrollTimeline;

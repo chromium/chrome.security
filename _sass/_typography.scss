@@ -115,6 +115,9 @@ li, a, strong, em {
     background-color: var(--cobalt);
     color: white;
     text-shadow: 0.1em 0.1em 0 var(--charcoal);
+    @include dark {
+      background-color: var(--night);
+    }
   }
 }
 
