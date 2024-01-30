@@ -16,6 +16,8 @@
   --ff-inter: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro", "Helvetica Neue", "Helvetica", 
     "Arial", "Roboto", "Ubuntu", "Segoe UI", "Fira Sans", "Droid Sans", 
     sans-serif;
+  --ff-monaspace-n: "Monaspace Neon", "Monaspace Neon Var", monospace;
+  --ff-monaspace-x: "Monaspace Xenon", "Monaspace Xenon Var", monospace;
 
 // Sizes
   --f-14:  0.75rem; // sml
@@ -136,7 +138,7 @@
   --linen: #ded1ca;
   --navy: #2d3554;
   --cerulean: #326AB3;
-  --bluescreen: #000585;
+  --bsod: #000585;
 
   // brights
   --cobalt: #0040ff;
@@ -162,7 +164,7 @@
     --fg-en: var(--grey6);
     --fg-em:  white;
     --fg-dm: var(--linen);
-    --bg: var(--bluescreen);
+    --bg: var(--bsod);
     --fc:     var(--navy);
     --ac: var(--cerulean);
   }

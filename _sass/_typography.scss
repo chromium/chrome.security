@@ -2,12 +2,6 @@
 
 html {
   font-size: 14px; // note this affects layout sizing also
-  // @include query($bp-2xl){
-  //   font-size: 18px;
-  // }
-  // @include query($bp-3xl){
-  //   font-size: 20px;
-  // }
   @media only print {
     font-size: 11pt;
   }
@@ -117,6 +111,7 @@ li, a, strong, em {
     text-shadow: 0.1em 0.1em 0 var(--charcoal);
     @include dark {
       background-color: var(--night);
+      text-shadow: 0.1em 0.1em 0 var(--bsod);
     }
   }
 }
@@ -184,7 +179,7 @@ header {
 }
 
 nav a.box,
-nav h2.grid-fours,
+nav h2.grid-4,
 .linkstyle {
   @extend .caps;
   font-size: var(--f-cemi);
@@ -199,7 +194,7 @@ nav a.box,
   }
 }
 
-nav h2.grid-fours {
+nav h2.grid-4 {
   @extend .light;
   @extend .italic;
 }

@@ -4,23 +4,23 @@ style: boxed
 ---
 
 <header class="grid-12">
-  <div class="grid-ones box">
+  <div class="grid-1 box">
     <h1 class="f-4xh black wide">chrome<wbr>.security</h1>
-    <p class="f-2xl lower">Making it safe to click on links</p>
+    <p class="f-2xl lower">Make it safe to click on links</p>
   </div>
 </header>
 
 <main class="grid-12">
-  <nav class="grid-ones">
+  <nav class="grid-1">
     <ul class="grid-12">
-      <li class="grid-threes-lil"><a href="https://www.chromium.org/Home/chromium-security/core-principles/" class="box">Core principles</a></li>
-      <li class="grid-threes-lil"><a href="https://www.chromium.org/Home/chromium-security/quarterly-updates/" class="box">Quarterly updates</a></li>
-      <li class="grid-threes-lil"><a href="https://bughunters.google.com/about/rules/5745167867576320/chrome-vulnerability-reward-program-rules" class="box">Vulnerability Rewards</a></li>
+      <li class="grid-3-lil"><a href="https://www.chromium.org/Home/chromium-security/core-principles/" class="box">Core principles</a></li>
+      <li class="grid-3-lil"><a href="https://www.chromium.org/Home/chromium-security/quarterly-updates/" class="box">Quarterly updates</a></li>
+      <li class="grid-3-lil"><a href="https://bughunters.google.com/about/rules/5745167867576320/chrome-vulnerability-reward-program-rules" class="box">Vulnerability Rewards</a></li>
     </ul>
   </nav>
 
-  <div class="grid-ones grid-12">
-    <section class="grid-twos-primary box xy-center">
+  <div class="grid-1 grid-12">
+    <section class="grid-2-primary box xy-center">
       <div class="featured">
         <p>Chrome Security’s mission is to make it safe to click on links.</p>
         <p>We have five focus areas:</p>
@@ -37,102 +37,33 @@ style: boxed
       
     </section>
 
-    <figure class="grid-twos-secondary box chromeball">
+    <figure class="grid-2-secondary box chromeball">
       {% include chromeball-protect.svg %}
     </figure>
   </div>
 
-  <section class="grid-ones grid-12">
-    <h2 class="grid-ones box f-xhr black wide lower text-center">Recent blog posts</h2>
-    {% for post in site.posts limit:3 %}
-    <a href="{{ post.source-url }}" class="grid-threes box">
-      <article>
-        <p class="blog-meta">{{ post.date | date: "%A %e %B, %Y" }}</p>
-        <h3>{{ post.title }}</h3>
-        <p class="blog-meta">{{ post.author }}</p>
-        <p class="blog-excerpt">{{ post.excerpt | strip_html }}</p>
-        <p class="linkstyle text-right">Keep reading</p>
-      </article>
-    </a>
-    <hr class="hidden">
-    {% endfor %}
+  <section class="grid-1 grid-12">
+    <h2 class="grid-1 box f-xhr black wide lower text-center">Recent blog posts</h2>
+    {% include list-posts.html post_source=site.posts limit=3 %}
   </section>
 
-  <!-- Links to talks and papers published by the team -->
-  <!-- "I have a bug to file, what do I do?" linkto VRP, buganizer, docs for security settings -->
+  <hr class="grid-1 dino">
 
-<!--   <section class="grid-ones grid-12">
-    <h2 class="grid-ones box f-xhr black wide lower text-right">Hand-crafted links for you</h2>
-    <section class="grid-fours box">
-      <h4 class="f-xlg thick">For <strong>security researchers</strong>...</h4>
-      <ul>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-      </ul>
-    </section>
-    <section class="grid-fours box">
-      <h4 class="f-xlg thick">For <strong>enterprise managers</strong>...</h4>
-      <ul>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-      </ul>
-    </section>
-    <section class="grid-fours box">
-      <h4 class="f-xlg thick">For <strong>CISOs</strong>...</h4>
-      <ul>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-      </ul>
-    </section>
-    <section class="grid-fours box">
-      <h4 class="f-xlg thick">For <strong>press & interested parties</strong>...</h4>
-      <ul>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-        <li><a href="#">Some links for you</a></li>
-      </ul>
-    </section>
-  </section> -->
-
-  <hr class="grid-ones dino">
-
-  <section class="grid-ones grid-12">
-    <h2 class="grid-ones box f-xhr black wide lower text-center">Even more posts!!11!1!oneeleven</h2>
-    {% for post in site.posts limit:8 offset:3 %}
-    <a href="{{ post.source-url }}" class="grid-fours box">
-      <article>
-        <p class="blog-meta">{{ post.date | date: "%A %e %B, %Y" }}</p>
-        <h3>{{ post.title }}</h3>
-        <p class="blog-meta">{{ post.author }}</p>
-        <p class="blog-excerpt">{{ post.excerpt | strip_html }}</p>
-        <p class="linkstyle text-right">Keep reading</p>
-      </article>
-    </a>
-    <hr class="hidden">
-    {% endfor %}
+  <section class="grid-1 grid-12">
+    <h2 class="grid-1 box f-xhr black wide lower text-center">Even more posts!!11!1!oneeleven</h2>
+    {% include list-posts.html post_source=site.posts limit=8 offset=3 %}
   </section>
 
 </main>
 
-<hr class="grid-ones dino">
+<hr class="grid-1 dino">
 
 <footer>
   <nav>
     <ul class="grid-12">
-      <li class="grid-threes-lil"><a href="https://blog.chromium.org/" class="box">Chromium blog</a></li>
-      <li class="grid-threes-lil"><a href="https://security.googleblog.com/" class="box">Google Security blog</a></li>
-      <li class="grid-threes-lil"><a href="https://googleprojectzero.blogspot.com/" class="box">Project Zero</a></li>
+      <li class="grid-3-lil"><a href="https://blog.chromium.org/" class="box">Chromium blog</a></li>
+      <li class="grid-3-lil"><a href="https://security.googleblog.com/" class="box">Google Security blog</a></li>
+      <li class="grid-3-lil"><a href="https://googleprojectzero.blogspot.com/" class="box">Project Zero</a></li>
     </ul>
   </nav>
 </footer>

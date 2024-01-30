@@ -72,18 +72,18 @@ body {
     grid-template-columns: subgrid;
   }
 
-  .grid-ones {
+  .grid-1 {
     grid-column: span 12;
   }
 
-  .grid-twos {
+  .grid-2 {
     grid-column: span 12;
     @include query($bp-med){
       grid-column: span 6;
     }
   }
 
-    .grid-twos-primary {
+    .grid-2-primary {
       grid-column: span 12;
       @include query($bp-med){
         grid-column: span 7;
@@ -91,12 +91,9 @@ body {
       @include query($bp-xlg){
         grid-column: span 9;
       }
-      @include query($bp-3xl){
-        grid-column: span 10;
-      }
     }
 
-    .grid-twos-secondary {
+    .grid-2-secondary {
       grid-column: span 12;
       @include query($bp-med){
         grid-column: span 5;
@@ -104,12 +101,9 @@ body {
       @include query($bp-xlg){
         grid-column: span 3;
       }
-      @include query($bp-3xl){
-        grid-column: span 2;
-      }
     }
 
-  .grid-threes-lil {
+  .grid-3-lil {
     grid-column: span 12;
     @include query($bp-med){
       grid-column: span 4;
@@ -122,21 +116,21 @@ body {
     }
   }
 
-  .grid-threes {
+  .grid-3 {
     grid-column: span 12;
     @include query($bp-lrg){
       grid-column: span 4;
     }
   }
 
-    .grid-threes-two {
+    .grid-3-two {
       grid-column: span 12;
     @include query($bp-lrg){
       grid-column: span 8;
     }
     }
 
-  .grid-fours {
+  .grid-4 {
     grid-column: span 12;
     @include query($bp-med){
       grid-column: span 6;
@@ -146,14 +140,14 @@ body {
     }
   }
 
-    .grid-fours-three {
+    .grid-4-3 {
       grid-column: span 12;
       @include query($bp-med){
         grid-column: span 9;
       }
     }
 
-  .grid-sixes {
+  .grid-6 {
     grid-column: span 12;
     @include query($bp-lrg){
       grid-column: span 2;
@@ -267,7 +261,7 @@ header .box {
   }
 }
 
-h2.grid-ones {
+h2.grid-1 {
   padding-top: var(--s2);
   padding-bottom: var(--s2);
 }

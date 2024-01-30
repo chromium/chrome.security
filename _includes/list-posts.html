@@ -1,0 +1,36 @@
+{% comment %}
+  Parameters--
+    post_source
+    limit
+    offset
+    grid_partition
+{% endcomment %}
+
+{% unless include.grid_partition %}
+  {% assign grid_partition = 1 %}
+  {% assign limit_modulo_4 = include.limit | modulo: 4 %}
+  {% assign limit_modulo_3 = include.limit | modulo: 3 %}
+  {% assign limit_modulo_2 = include.limit | modulo: 2 %}
+  {% if limit_modulo_4 == 0 %}
+    {% assign grid_partition = 4 %}
+  {% elsif limit_modulo_3 == 0 %}
+    {% assign grid_partition = 3 %}
+  {% elsif limit_modulo_2 == 0 %}
+    {% assign grid_partition = 2 %}
+  {% endif %}
+{% else %}
+  {% assign grid_partition = include.grid_partition %}
+{% endunless %}
+
+{% for post in include.post_source limit: include.limit offset: include.offset %}
+  <a href="{{ post.source-url }}" class="grid-{{ grid_partition }} box">
+    <article>
+      <p class="blog-meta">{{ post.date | date: "%A %e %B, %Y" }}</p>
+      <h3>{{ post.title }}</h3>
+      <p class="blog-meta">{{ post.author }}</p>
+      <p class="blog-excerpt">{{ post.excerpt | strip_html }}</p>
+      <p class="linkstyle text-right">Keep reading</p>
+    </article>
+  </a>
+  <hr class="hidden">
+{% endfor %}
