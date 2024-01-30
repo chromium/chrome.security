@@ -1,9 +1,8 @@
 title: chrome.security
-email: sereeena@google.com
 description: > 
-  Chrome Security
-baseurl: "/chrome-security-placeholder"
-url: https://heisenburger.github.io/chrome-security-placeholder/
+  Chrome Security's mission is to make it safe to click on links.
+baseurl: "/"
+url: https://chrome.security/
 
 # Build settings
 markdown: kramdown
