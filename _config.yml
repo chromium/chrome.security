@@ -1,8 +1,8 @@
 title: chrome.security
 description: > 
   Chrome Security's mission is to make it safe to click on links.
-baseurl: "/"
-url: https://chrome.security/
+baseurl: ""
+url: https://chrome.security
 
 # Build settings
 markdown: kramdown

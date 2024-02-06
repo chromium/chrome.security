@@ -5,24 +5,28 @@
 // Chromeball animation
 
 #chromeball-outline {
+  will-change: transform;
   animation: 
     rotate 250s linear infinite
    ,rotate-chromeball 1ms ease-in-out
   ;
 }
 #circle-dotted-inner {
+  will-change: transform;
   animation: 
     rotate-back 350s linear infinite
    ,rotate-circle-dotted-inner 1ms ease-in-out
   ;
 }
 #circle-dotted-middle {
+  will-change: transform;
   animation: 
     rotate 600s linear infinite
    ,rotate-circle-dotted-middle 1ms ease-in-out
   ;
 }
 #circle-dotted-outer {
+  will-change: transform;
   animation: 
     rotate-back 800s linear infinite
    ,rotate-circle-dotted-outer 1ms ease-in-out
@@ -32,6 +36,7 @@
 // Squiggle hr
 
 hr.dino::before {
+  will-change: translate;
   animation: 
     scroll-bg-x 50s linear infinite
    ,scroll-bg-x 1ms ease-in-out
