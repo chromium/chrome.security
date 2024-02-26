@@ -1,6 +1,5 @@
 ---
 title: Redesigning Chrome downloads, to keep you productive and safe online
-author: Joshua Cruz, Communications Manager 
 date: 2023-08-03
 source-url: https://blog.chromium.org/2023/08/redesigning-chrome-downloads-to-keep.html
 source-blog: Chromium blog
