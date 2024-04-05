@@ -1,7 +1,7 @@
 ---
 title: Fighting cookie theft using device bound sessions
 author: Kristian Monsen, Chrome Counter Abuse
-date: 02-04-2024
+date: 2024-04-02
 source-url: https://blog.chromium.org/2024/04/fighting-cookie-theft-using-device.html
 source-blog: Chromium Blog
 ---
