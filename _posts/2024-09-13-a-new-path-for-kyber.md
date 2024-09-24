@@ -1,6 +1,6 @@
 ---
 title: A new path for Kyber on the web
-author: David Adrian and Bob Beck and David Benjamin and Devon O'Brien
+author: David Adrian, Bob Beck, David Benjamin and Devon O'Brien
 date: 2024-09-13
 source-url: https://security.googleblog.com/2024/09/a-new-path-for-kyber-on-web.html
 source-blog: Google Security Blog
