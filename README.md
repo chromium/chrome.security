@@ -14,7 +14,9 @@ Add your post to our team website by:
 5. Convert the body of the blog post to markdown and paste the body of the post under the `---` on line 8. This will be used to generate an excerpt for the link.
 6. Save it! Commit it! Bop it! Pull request it!
 
-**To preview your changes locally, you will need to install and run [Jekyll](https://jekyllrb.com/docs/)**, which requires Ruby 2.5.0 or higher. 
+### Previewing changes locally (optional)
+
+To preview your changes locally, you will need to install and run [Jekyll](https://jekyllrb.com/docs/), which requires Ruby 2.5.0 or higher. This comes with the standard fun and excitement of wrangling with modern web dev environments and their many dependencies, so this part is completely optional.
 
 Open up the cloned directory in your command line tool of choice, and run 
 
