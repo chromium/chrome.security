@@ -4,6 +4,7 @@ author: Jasika Bawa and Phiroze Parakh
 date: 2025-05-08
 source-url: https://blog.google/technology/safety-security/how-were-using-ai-to-combat-the-latest-scams/
 source-blog: The Keyword
+---
 
 For more than a decade Google has used advancements in AI to protect you from
 online scams where malicious actors deceive users to gain access to money,
