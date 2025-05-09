@@ -6,13 +6,29 @@ This website is a glorified list of links; a collection of some of the things we
 
 Are you a member of Chrome Security who has recently published a blog post? First of all: congrats!
 
+### Converting to markdown
+
+Posts can be added to the website in Markdown format. To convert your published blog post to markdown format, you can follow these steps:
+
+1. Download the blog post to your local machine:
+```
+wget -O blogpost.html https://example.com/link-to-blog-post
+```
+2. Use `pandoc` to automatically convert it to markdown format.
+```
+pandoc -f html -t markdown --markdown-headings=atx --columns=80 -o blogpost.md blogpost.html
+```
+3. Edit the `blogpost.md` file in your favorite editor, as appropriate, and then use it in Step 5 below.
+
+### Adding the post to the website
+
 Add your post to our team website by:
 
 1. `git clone`ing this repo
 2. Under the `_posts` directory you'll find `template.md`. Save a copy of this file with a filename in the following format: `YYYY-MM-DD-permalink.md`, where the `YYYY-MM-DD` date is the date of publication, and `permalink` is the permalink string.
 4. Fill in the fields. You can delete the `excerpt` line, unless you want a custom excerpt.
-5. Convert the body of the blog post to markdown and paste the body of the post under the `---` on line 8. This will be used to generate an excerpt for the link.
-6. Save it! Commit it! Bop it! Pull request it!
+5. Paste the contents of the markdown file generated above (`blogpost.md`) under the `---` on line 8. This will be used to generate an excerpt for the link.
+7. Save it! Commit it! Bop it! Pull request it!
 
 ### Previewing changes locally (optional)
 
