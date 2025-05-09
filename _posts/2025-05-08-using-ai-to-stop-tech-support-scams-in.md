@@ -1,5 +1,5 @@
 ---
-title: How we’re using AI to combat the latest scams
+title: Using AI to stop tech support scams in Chrome
 author: Jasika Bawa, Andy Lim, and Xinghui Lu, Google Chrome Security
 date: 2025-05-08
 source-url: https://security.googleblog.com/2025/05/using-ai-to-stop-tech-support-scams-in.html
