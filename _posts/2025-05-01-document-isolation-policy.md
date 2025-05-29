@@ -1,5 +1,5 @@
 ---
-title: Document Isolation Policy: Enable powerful web features with ease
+title: "Document Isolation Policy: Enable powerful web features with ease"
 author: Camille Lamy
 date: 2025-05-01
 source-url: https://developer.chrome.com/blog/document-isolation-policy
