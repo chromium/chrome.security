@@ -97,3 +97,24 @@ $bp-3xl: 2800px;
   ,"layout"
   ,"animations"
 ;
+
+// Highlighted Contribute button
+.contribute-btn {
+  background: linear-gradient(90deg, #ffd600 0%, #ffea00 100%);
+  color: #222;
+  font-weight: bold;
+  border-radius: 2em;
+  border: 2px solid #ffd600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 0.5em 1.5em;
+  margin-left: 0.5em;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  text-shadow: none;
+}
+.contribute-btn:hover, .contribute-btn:focus {
+  background: linear-gradient(90deg, #fffde7 0%, #fff9c4 100%);
+  color: #111;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border-color: #ffea00;
+  text-decoration: underline;
+}
