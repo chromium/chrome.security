@@ -1,5 +1,5 @@
 ---
-title: "New permission prompt for Local Network Access"
+title: "Advancing Protection in Chrome on Android"
 author: David Adrian and Javier Castro Peter Kotwicz
 date: 2025-07-08
 source-url: https://security.googleblog.com/2025/07/advancing-protection-in-chrome-on.html
