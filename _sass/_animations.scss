@@ -35,11 +35,23 @@
 
 // Squiggle hr
 
+hr.dino:hover {
+  cursor: url("../images/cactus.png"), auto;
+}
+
 hr.dino::before {
   will-change: translate;
   animation: 
     scroll-bg-x 5000s linear infinite
    ,scroll-bg-x 1ms ease-in-out
+  ;
+}
+
+hr.dino:hover::after {
+  will-change: translate;
+  animation: 
+    bounce 2s ease-in-out infinite
+   ,bounce 1ms ease-in-out
   ;
 }
 
@@ -49,7 +61,8 @@ hr.dino::before {
 #circle-dotted-inner,
 #circle-dotted-middle,
 #circle-dotted-outer,
-hr.dino::before {
+hr.dino::before,
+hr.dino:hover::after {
   transform-origin: center center;
   // animation-duration: 1ms; // Firefox requires this to apply the animation
   animation-timeline: auto, --scrollTimeline;
@@ -96,4 +109,22 @@ hr.dino::before {
 @keyframes scroll-bg-x {
   from { background-position-x: 0;   }
   to {   background-position-x: calc(-1 * var(--animation-speed-factor) * 50vmax); }
+}
+
+@keyframes bounce {
+  from, to { transform: translateY(0) scale(1, 1); }
+  10% { transform: translateY(-5%); }
+  35% { transform: translateY(5%); }
+  40% { transform: scale(1.15, 0.8); }
+  50% { transform: translateY(-120%) scale(1, 1.05); }
+  60% { transform: translateY(10%) scale(0.95, 1.1); }
+  65% { transform: translateY(0) scale(1.1, 0.9); }
+  80% { transform: scale(0.95, 1.05); }
+}
+
+@keyframes gelatine {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
 }
