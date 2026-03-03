@@ -7,28 +7,28 @@
 #chromeball-outline {
   will-change: transform;
   animation: 
-    rotate 250s linear infinite
+    rotate-back 15000s linear infinite
    ,rotate-chromeball 1ms ease-in-out
   ;
 }
 #circle-dotted-inner {
   will-change: transform;
   animation: 
-    rotate-back 350s linear infinite
+    rotate 8000s linear infinite
    ,rotate-circle-dotted-inner 1ms ease-in-out
   ;
 }
-#circle-dotted-middle {
-  will-change: transform;
-  animation: 
-    rotate 600s linear infinite
-   ,rotate-circle-dotted-middle 1ms ease-in-out
-  ;
-}
+// #circle-dotted-middle {
+//   will-change: transform;
+//   animation: 
+//     rotate 600s linear infinite
+//    ,rotate-circle-dotted-middle 1ms ease-in-out
+//   ;
+// }
 #circle-dotted-outer {
   will-change: transform;
   animation: 
-    rotate-back 800s linear infinite
+    rotate-back 12000s linear infinite
    ,rotate-circle-dotted-outer 1ms ease-in-out
   ;
 }
@@ -38,7 +38,7 @@
 hr.dino::before {
   will-change: translate;
   animation: 
-    scroll-bg-x 50s linear infinite
+    scroll-bg-x 5000s linear infinite
    ,scroll-bg-x 1ms ease-in-out
   ;
 }
@@ -59,37 +59,41 @@ hr.dino::before {
 
 // Animation definitions
 
+:root {
+  --animation-speed-factor: 80;
+}
+
 @keyframes rotate {
   from { transform: rotate(0deg);    }
-  to {   transform: rotate(calc(3 * -360deg)); }
+  to {   transform: rotate(calc(var(--animation-speed-factor) * -360deg)); }
 }
 
 @keyframes rotate-back {
   from { transform: rotate(0deg);    }
-  to {   transform: rotate(calc(3 * 360deg)); }
+  to {   transform: rotate(calc(var(--animation-speed-factor) * 360deg)); }
 }
 
 @keyframes rotate-chromeball {
   from { transform: rotate(0deg);   }
-  to {   transform: rotate(calc(3 * -180deg)); }
+  to {   transform: rotate(calc(var(--animation-speed-factor) * -180deg)); }
 }
 
 @keyframes rotate-circle-dotted-inner {
   from { transform: rotate(0deg);  }
-  to {   transform: rotate(calc(3 * 60deg)); }
+  to {   transform: rotate(calc(var(--animation-speed-factor) * 60deg)); }
 }
 
 @keyframes rotate-circle-dotted-middle {
   from { transform: rotate(0deg);    }
-  to {   transform: rotate(calc(3 * -60deg)); }
+  to {   transform: rotate(calc(var(--animation-speed-factor) * -60deg)); }
 }
 
 @keyframes rotate-circle-dotted-outer {
   from { transform: rotate(0deg);   }
-  to {   transform: rotate(calc(3 * 30deg)); }
+  to {   transform: rotate(calc(var(--animation-speed-factor) * 30deg)); }
 }
 
 @keyframes scroll-bg-x {
   from { background-position-x: 0;   }
-  to {   background-position-x: -50vmax; }
+  to {   background-position-x: calc(-1 * var(--animation-speed-factor) * 50vmax); }
 }

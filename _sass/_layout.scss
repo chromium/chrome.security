@@ -305,6 +305,7 @@ hr.dino {
   border: none;
   height: var(--s4);
   mix-blend-mode: difference;
+  overflow: visible;
   &::before {
     --margin-tb: var(--u1);
     --margin-lr: calc(var(--s1) / 2);
