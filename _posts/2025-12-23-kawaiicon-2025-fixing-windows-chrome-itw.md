@@ -1,9 +1,9 @@
 ---
-title: Video - Fixing Two ITW bugs in Chrome (Kawaiicon 2025)
+title: Fixing two ITW bugs in Chrome (Kawaiicon 2025)
 author: Alex Gough
 date: 2025-12-23
 source-url: https://youtu.be/mxN8puPTLCs?si=zqTL0cb2Q4Wh6y_k
-source-blog: Kawaiicon NZ Youtube
+source-blog: Kawaiicon NZ
 excerpt: Alex Gough talks about fixing two sandbox escapes in Chrome and how to use postmortems to learn and make improvements to Chrome's IPC stack.
 ---
 
