@@ -1,3 +1,6 @@
+@use "mixins" as *;
+@use "vars" as *;
+
 // the great grand parent elements
 html {
   min-height: 100vh;
@@ -269,17 +272,17 @@ h2.grid-1 {
 article {
   padding-top: var(--s2);
   padding-bottom: var(--s2);
-  @include query($bp-lrg) {
-    padding-top: var(--s1);
-    padding-bottom: var(--s1);
-  }
   height: 100%;
-  @extend .flex;
   flex-direction: column;
     p:nth-last-child(2) {
       @extend .flex-grow;
       margin-bottom: var(--u2);
     }
+  @include query($bp-lrg) {
+    padding-top: var(--s1);
+    padding-bottom: var(--s1);
+  }
+  @extend .flex;
 }
 
 // decorative
@@ -293,11 +296,6 @@ article {
     padding: var(--s2);
   }
 }
-
-// make it smaller on mobile views
-
-  #chromeball-protect {
-  }
 
 hr.dino {
   position: relative;

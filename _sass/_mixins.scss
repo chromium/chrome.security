@@ -1,0 +1,79 @@
+// ========================
+// Mixins, helper functions
+// ========================
+
+// Helpers
+@mixin query($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin querydown($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin dark() {
+  @media only screen and (prefers-color-scheme: dark) {
+    @content
+  }
+}
+
+@mixin reducemotion() {
+  @media only screen and (prefers-reduced-motion) {
+    @content
+  }
+}
+
+// CSS snippets
+@mixin transit {
+  transition: all 0.2s ease-in-out;
+  @include reducemotion {
+    transition: none;
+  }
+}
+
+@mixin respectReduceMotion {
+  @include reducemotion(){
+    animation: none;
+  }
+}
+
+@mixin pseudo {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin x-center {
+  // parent must span 100% of space to be centered in
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin y-center($direction: column) {
+  display: flex;
+  @if $direction == column {
+    flex-direction: column; // children of this element will flow in a column
+    justify-content: center;
+  }
+  @if $direction == row {
+    flex-direction: column; // children of this element will flow in a row
+    align-items: center;
+  }
+}
+
+@mixin y-center {
+  display: flex;
+  flex-direction: row; // children of this element will flow in a column
+  align-items: center;
+}
+
+@mixin xy-center { // place on parent element
+  display: grid;
+  place-items: center; // this centers child elements within the grid cell
+}
