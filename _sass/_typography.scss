@@ -206,6 +206,10 @@ nav h2.grid-4 {
 .featured {
   @extend .f-lrg;
   @extend .light;
+  p {
+    margin-bottom: var(--s1);
+    font-size: 1.16em;
+  }
   ul {
     list-style: none;
   }
