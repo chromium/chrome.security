@@ -1,5 +1,5 @@
 ---
-title: Stronger with every update: How we’re making Chrome and the web safer in the AI Era
+title: "Stronger with every update: How we’re making Chrome and the web safer in the AI Era"
 author: Chrome Security Team
 date: 2026-07-30
 source-url: https://blog.google/security/chrome-stronger-with-every-update/
