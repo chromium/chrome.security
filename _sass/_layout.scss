@@ -207,11 +207,11 @@ header .box {
   position: relative;
   @include query($bp-xlg){
     max-width: 40em;
-    padding: var(--s2);
+    padding: var(--s1);
   }
   @include query($bp-3xl){
     margin: var(--s2);
-    padding: var(--s2);
+    padding: var(--s1);
   }
 }
 
