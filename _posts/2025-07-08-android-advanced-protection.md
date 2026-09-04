@@ -1,6 +1,6 @@
 ---
 title: "Advancing Protection in Chrome on Android"
-author: David Adrian and Javier Castro Peter Kotwicz
+author: David Adrian, Javier Castro, and Peter Kotwicz
 date: 2025-07-08
 source-url: https://security.googleblog.com/2025/07/advancing-protection-in-chrome-on.html
 source-blog: Google Security Blog
